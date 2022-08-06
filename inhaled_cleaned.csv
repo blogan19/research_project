@@ -1,0 +1,583 @@
+,drug,primary_dose,route,primary_dose_description,frequency_description,c_form,prn
+131,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,QDS,Nebuliser Solution,N
+132,SALBUTAMOL,5,Nebulised (via compressor),mg,QDS,Nebuliser Solution,Y
+133,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+138,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,QDS,Nebuliser Solution,Y
+139,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+155,SALBUTAMOL,2.5,Nebulised (via compressor),mg,QDS,Nebuliser Solution,Y
+259,BECLOMETASONE CFC FREE 'CLENIL',2,Inhaled,puffs,BD,Inhaler,N
+369,TIOTROPIUM 'ZONDA',10,Inhaled,microgram,OM,Inhalation Powder Capsules,N
+375,TIOTROPIUM 'HANDIHALER',1,Inhaled,dose(s),OM,Dry Powder For Inhalation,N
+376,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,Y
+396,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,Y
+415,MOMETASONE,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+417,TRIMBOW 'MDI' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+444,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,Y
+565,AIRFLUSAL FORSPIRO,1,Inhaled,dose,BD,Dry Powder Inhaler,N
+678,UMECLIDINIUM 'ELLIPTA',1,Inhaled,dose,OM,Dry Powder Inhaler,N
+680,SERETIDE 'ACCUHALER',1,Inhaled,dose,BD,Dry Powder Inhaler,N
+789,BECLOMETASONE AQUEOUS,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+834,STERIMAR ISOtonic,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+835,DYMISTA,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+905,TRELEGY 'ELLIPTA' 92micrograms/55micrograms/22micrograms,1,Inhaled,puffs,OM,Dry Powder Inhaler,N
+906,SYMBICORT 'TURBOHALER',2,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+907,FOSTAIR 'NEXThaler',2,Inhaled,puffs,BD,Dry Powder Inhaler,N
+944,AEROCHAMBER (PLUS) STANDARD 'BLUE',1,Inhaled,device,AS DIRECTED BY PRESCRIBER,Inhalation Device,N
+945,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+1035,SALBUTAMOL,2.5,Nebulised (via compressor),mg,QDS,Nebuliser Solution,N
+1158,FLUTICASONE PROPIONATE,1,Inhaled,dose(s),BD,Accuhaler,N
+1217,DUORESP 'SPIROMAX' 160/4.5,1,Inhaled,puffs,BD,Dry Powder Inhaler,N
+1223,SALBUTAMOL,5,Nebulised (via compressor),mg,6H,Nebuliser Solution,Y
+1224,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,4H,Nebuliser Solution,Y
+1256,SPIOLTO 2.5microgram/2.5microgram/dose 'RESPIMAT',2,Inhaled,inhalation,OM,Inhaler,N
+1257,ANORO 'ELLIPTA' 55microgram/22microgram,1,Inhaled,dose,OM,Dry Powder Inhaler,N
+1271,STERIMAR ISOtonic,2,BOTH nostrils,sprays,TDS,Nasal Spray,N
+1411,SALBUTAMOL,5,Nebulised (via compressor),mg,QDS,Nebuliser Solution,N
+1518,TRELEGY 'ELLIPTA' 92micrograms/55micrograms/22micrograms,1,Inhaled,puffs,BD,Dry Powder Inhaler,N
+1679,STERIMAR ISOtonic,1,BOTH nostrils,sprays,QDS,Nasal Spray,N
+1699,RELVAR 'ELLIPTA' 184micrograms / 22micrograms,1,Inhaled,dose,OM,Inhaler,N
+1747,BECLOMETASONE CFC FREE 'CLENIL',1,Inhaled,puffs,BD,Inhaler,N
+1868,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,Y
+1872,IPRATROPIUM BROMIDE,250,Nebulised (via compressor),microgram,QDS,Nebuliser Solution,N
+1873,SALBUTAMOL,2.5,Nebulised (via compressor),mg,BD,Nebuliser Solution,Y
+2136,TIOTROPIUM 'RESPIMAT',5,Inhaled,microgram,OM,Inhaler,N
+2147,COMBISAL,2,Inhaled,puffs,BD,Inhaler,N
+2155,BECLOMETASONE 'QVAR AUTOHALER',2,Inhaled,puffs,BD,Inhaler,N
+2158,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,BD,Nebuliser Solution,N
+2183,FOSTAIR 'NEXThaler',1,Inhaled,puffs,BD,Dry Powder Inhaler,N
+2194,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,QDS,Nebuliser Solution,Y
+2229,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,QDS,Nebuliser Solution,N
+2293,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,Y
+2304,SALBUTAMOL 'EASYHALER',1,Inhaled,puffs,QDS,Dry Powder Inhaler,Y
+2342,SYMBICORT 'TURBOHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+2398,SALBUTAMOL,2.5,Nebulised (via compressor),mg,6H,Nebuliser Solution,N
+2408,SALBUTAMOL,2.5,Nebulised (via compressor),mg,6H,Nebuliser Solution,Y
+2414,IPRATROPIUM BROMIDE,250,Nebulised (via compressor),microgram,QDS,Nebuliser Solution,Y
+2545,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,6H,Inhaler,Y
+2546,BECLOMETASONE 'QVAR',2,Inhaled,puffs,BD,Inhaler,N
+2547,MOMETASONE,4,BOTH nostrils,sprays,OM,Nasal Spray,N
+2600,MOMETASONE,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+2824,SALBUTAMOL,2.5,Nebulised (via compressor),mg,TDS,Nebuliser Solution,N
+2971,SYMBICORT 'MDI' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+2972,SYMBICORT 'MDI' CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+3017,SALBUTAMOL 'SALAMOL' CFC FREE,5,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+3204,FLUTICASONE PROPIONATE,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+3293,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,6H,Inhaler,Y
+3309,RELVAR 'ELLIPTA' 92micrograms / 22micrograms,1,Inhaled,dose,OM,Inhaler,N
+3339,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,QDS,Nebuliser Solution,N
+3428,AEROCHAMBER (PLUS) STANDARD WITH MASK 'BLUE',1,Inhaled,device,BD,Inhalation Device,N
+3536,SALBUTAMOL,2.5,Nebulised (via compressor),mg,4H,Nebuliser Solution,N
+3596,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+3630,DUORESP 'SPIROMAX' 160/4.5,2,Inhaled,puffs,BD,Dry Powder Inhaler,N
+3645,FORMOTEROL 'TURBOHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+3700,SALBUTAMOL 'EASI-BREATHE' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,Y
+3717,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+3777,DUAKLIR 'GENUAIR' 340/12micrograms,1,Inhaled,puffs,BD,Dry Powder Inhaler,N
+3878,FLUTICASONE PROPIONATE,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+3914,FLUTICASONE PROPIONATE,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+3988,FLUTICASONE FUROATE,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+4073,SALBUTAMOL,10,Nebulised (via compressor),mg,QDS,Nebuliser Solution,N
+4117,DYMISTA,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+4230,SIRDUPLA 25/250 CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+4239,ULTIBRO 'BREEZHALER' 85/43micrograms,1,Inhaled,dose(s),OM,Dry Powder For Inhalation,N
+4300,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,4H,Nebuliser Solution,N
+4301,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),QDS,Dry Powder Inhaler,Y
+4376,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,TDS,Inhaler,Y
+4407,MOMETASONE,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+4480,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Every 2 hours,Inhaler,Y
+4491,SALBUTAMOL,2.5,Nebulised (via compressor),mg,TDS,Nebuliser Solution,Y
+4492,SALBUTAMOL,5,Nebulised (via compressor),mg,TDS,Nebuliser Solution,Y
+4526,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+4626,SERETIDE 'EVOHALER' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+4629,SALBUTAMOL 'AIROMIR' CFC FREE,1,Inhaled,puffs,TDS,Inhaler,Y
+4803,SALBUTAMOL 'EASYHALER',2,Inhaled,puffs,QDS,Dry Powder Inhaler,Y
+4818,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Five times a day,Nebuliser Solution,N
+4874,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,BD,Nebuliser Solution,Y
+4956,FLUTICASONE PROPIONATE,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+5013,SODIUM CHLORIDE,1,Nebulised (via compressor),2.5ml Unit-Dose Neb,QDS,Nebuliser Solution,N
+5283,BUDESONIDE,2,BOTH nostrils,sprays,OM,Nasal Spray,Y
+5325,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,BD,Nebuliser Solution,N
+5376,FLUTIFORM 250/10 CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+5385,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,TDS,Nebuliser Solution,N
+5422,IPRATROPIUM BROMIDE,2,Inhaled,puffs,QDS,Inhaler,N
+5842,IPRATROPIUM BROMIDE,2,Inhaled,puffs,QDS,Inhaler,Y
+5851,FORMOTEROL 'TURBOHALER',2,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+5875,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,N
+6034,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,6H,Inhaler,Y
+6059,SYMBICORT 'TURBOHALER',1,Inhaled,dose(s),OM,Dry Powder Inhaler,N
+6144,SALMETEROL 'ACCUHALER',2,Inhaled,dose,BD,Dry Powder Inhaler,N
+6145,FLUTICASONE PROPIONATE,2,Inhaled,dose(s),BD,Accuhaler,N
+6149,ACLIDINIUM BROMIDE,1,Inhaled,dose(s),BD,Dry Powder For Inhalation,N
+6157,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,3H,Nebuliser Solution,Y
+6269,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,TDS,Inhaler,N
+6275,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,TDS,Nebuliser Solution,Y
+6346,AEROCHAMBER (PLUS) STANDARD 'BLUE',1,Inhaled,device,BD,Inhalation Device,N
+6437,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,N
+6474,SALBUTAMOL 'EASYHALER',2,Inhaled,puffs,BD,Dry Powder Inhaler,Y
+6475,BUDESONIDE 'EASYHALER',2,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+6492,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,TDS,Nebuliser Solution,N
+6494,FORMOTEROL 'EASYHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+6561,DYMISTA,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+6578,BECLOMETASONE CFC FREE 'CLENIL',2,Inhaled,puffs,OM,Inhaler,N
+6625,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,Y
+6626,SODIUM CHLORIDE,4,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 3 hours,Nebuliser Solution,Y
+6649,BECLOMETASONE 'QVAR',1,Inhaled,puffs,BD,Inhaler,N
+6711,DUAKLIR 'GENUAIR' 340/12micrograms,2,Inhaled,puffs,BD,Dry Powder Inhaler,N
+6762,TIOTROPIUM 'RESPIMAT',5,Inhaled,microgram,BD,Inhaler,N
+6766,FLUTICASONE FUROATE,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+6776,XYLOMETAZOLINE,1,BOTH nostrils,sprays,TDS,Nasal Spray,N
+6821,TIOTROPIUM 'RESPIMAT',2.5,Inhaled,microgram,OM,Inhaler,N
+6822,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Every 2 hours,Inhaler,N
+6858,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),OM,Dry Powder Inhaler,Y
+6917,DUORESP 'SPIROMAX' 160/4.5,1,Inhaled,puffs,TDS,Dry Powder Inhaler,N
+6947,GLYCOPYRRONIUM 'SEEBRI BREEZHALER',1,Inhaled,dose(s),OM,Inhaler,N
+6948,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,Every 15 minutes,Dry Powder Inhaler,Y
+7094,XYLOMETAZOLINE,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+7099,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,BD,Nebuliser Solution,N
+7118,STERIMAR HYPERtonic,1,BOTH nostrils,sprays,QDS,Nasal Spray,N
+7453,BECLOMETASONE 'QVAR EASI-BREATHE',2,Inhaled,puffs,BD,Inhaler,N
+7660,STERIMAR HYPERtonic,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+7841,MOMETASONE,2,BOTH nostrils,sprays,OM,Nasal Spray,Y
+7863,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,TDS,Inhaler,Y
+7902,AEROCHAMBER (PLUS) STANDARD 'BLUE',1,Inhaled,device,QDS,Inhalation Device,N
+8045,UMECLIDINIUM 'ELLIPTA',1,Inhaled,dose,ON,Dry Powder Inhaler,N
+8123,XYLOMETAZOLINE,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+8126,XYLOMETAZOLINE,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+8205,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,OM,Nebuliser Solution,N
+8437,SERETIDE 'EVOHALER' CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+8456,SALBUTAMOL,2.5,Nebulised (via compressor),mg,BD,Nebuliser Solution,N
+8485,SALBUTAMOL 'AIROMIR' CFC FREE,1,Inhaled,puffs,4H,Inhaler,Y
+8503,STERIMAR ISOtonic,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+8523,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,BD,Nebuliser Solution,Y
+8579,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+8752,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,4H,Inhaler,Y
+8818,BUDESONIDE,1,Nebulised (via compressor),mg,BD,Nebuliser Solution,N
+8819,BUDESONIDE 'EASYHALER',4,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+8829,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,6H,Inhaler,N
+8844,SALMETEROL,2,Inhaled,dose,BD,Inhaler,N
+8845,BUDESONIDE 'TURBOHALER',2,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+8868,BUDESONIDE,500,Nebulised (via compressor),microgram,BD,Nebuliser Solution,N
+8924,DUORESP 'SPIROMAX' 320/9,1,Inhaled,puffs,BD,Dry Powder Inhaler,N
+8950,DUORESP 'SPIROMAX' 320/9,2,Inhaled,puffs,BD,Dry Powder Inhaler,N
+8997,AEROCHAMBER (PLUS) STANDARD WITH MASK 'BLUE',1,Inhaled,device,OM,Inhalation Device,N
+9099,FLUTICASONE FUROATE,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+9121,AEROCHAMBER (PLUS) STANDARD WITH MASK 'BLUE',1,Inhaled,device,AS DIRECTED BY PRESCRIBER,Inhalation Device,N
+9180,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,TDS,Inhaler,Y
+9204,SALBUTAMOL,5,Nebulised (via compressor),mg,TDS,Nebuliser Solution,N
+9330,FLUTICASONE FUROATE,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+9362,STERIMAR ISOtonic,1,BOTH nostrils,sprays,TDS,Nasal Spray,N
+9564,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,ON,Inhaler,N
+9596,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),OM,Dry Powder Inhaler,N
+9767,SALBUTAMOL 'ACCUHALER',2,Inhaled,dose,6H,Dry Powder Inhaler,Y
+9832,SALBUTAMOL,5,Nebulised (via compressor),mg,Every 2 hours,Nebuliser Solution,Y
+9839,SALBUTAMOL,5,Nebulised (via compressor),mg,6H,Nebuliser Solution,N
+10127,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,TDS,Nebuliser Solution,N
+10238,SALBUTAMOL,5,Nebulised (via compressor),mg,Every 3 hours,Nebuliser Solution,N
+10364,SIRDUPLA 25/125 CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+10433,NICOTINE 'NICORETTE',1,Inhaled,dose(s),3H,Inhalator,Y
+10516,GLYCOPYRRONIUM 'SEEBRI BREEZHALER',1,Inhaled,dose(s),OM,Inhaler,Y
+10544,NICOTINE 'NICORETTE',1,Inhaled,dose(s),QDS,Inhalator,N
+10603,ULTIBRO 'BREEZHALER' 85/43micrograms,1,Inhaled,dose(s),ON,Dry Powder For Inhalation,N
+10646,IPRATROPIUM BROMIDE,2,Inhaled,puffs,TDS,Inhaler,N
+10671,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,4H,Inhaler,Y
+10684,FOSTAIR 'NEXThaler',2,Inhaled,puffs,BD,Dry Powder Inhaler,Y
+10743,NICOTINE 'NICORETTE',1,Inhaled,dose(s),QDS,Inhalator,Y
+10953,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,Every 2 hours,Inhaler,Y
+10996,MOMETASONE,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+11037,AZELASTINE,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+11042,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,6H,Nebuliser Solution,Y
+11071,SODIUM CHLORIDE,40,Nebulised (via compressor),2.5ml Unit-Dose Neb,BD,Nebuliser Solution,Y
+11081,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 3 hours,Nebuliser Solution,N
+11139,BECLOMETASONE AQUEOUS,2,BOTH nostrils,sprays,BD,Nasal Spray,Y
+11143,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+11160,SALBUTAMOL,5,Nebulised (via compressor),mg,4H,Nebuliser Solution,N
+11340,SPIOLTO 2.5microgram/2.5microgram/dose 'RESPIMAT',2,Inhaled,inhalation,BD,Inhaler,N
+11363,MOMETASONE,1,BOTH nostrils,sprays,OM,Nasal Spray,Y
+11365,SALBUTAMOL 'EASYHALER',1,Inhaled,puffs,4H,Dry Powder Inhaler,Y
+11377,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Every hour,Inhaler,Y
+11469,FLUTICASONE CFC-FREE EVOHALER,1,Inhaled,puffs,BD,Inhaler,N
+11612,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,6H,Nebuliser Solution,N
+11613,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,Y
+11644,COMBISAL,1,Inhaled,puffs,BD,Inhaler,N
+11731,BECLOMETASONE 'EASYHALER',1,Inhaled,puffs,BD,Inhaler,N
+11735,BECLOMETASONE 'EASYHALER',1,Inhaled,puffs,BD,Inhaler,Y
+11960,SALBUTAMOL 'EASI-BREATHE' CFC FREE,2,Inhaled,puffs,6H,Inhaler,Y
+12078,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,BD,Nebuliser Solution,Y
+12194,BUDESONIDE 'EASYHALER',2,Inhaled,dose(s),BD,Dry Powder Inhaler,Y
+12227,IPRATROPIUM BROMIDE,250,Nebulised (via compressor),microgram,TDS,Nebuliser Solution,N
+12348,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,TDS,Inhaler,Y
+12355,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,Y
+12384,SODIUM CHLORIDE,1,Nebulised (via compressor),2.5ml Unit-Dose Neb,QDS,Nebuliser Solution,Y
+12412,INDACATEROL,1,Inhaled,dose(s),OM,Dry Powder For Inhalation,N
+12424,BUDESONIDE 'EASYHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+12514,SALBUTAMOL,5,Nebulised (via compressor),mg,Every 15 minutes,Nebuliser Solution,Y
+12551,STERIMAR ISOtonic,2,BOTH nostrils,sprays,QDS,Nasal Spray,N
+12626,IPRATROPIUM BROMIDE,2,Inhaled,puffs,BD,Inhaler,N
+12829,FOSTAIR 'NEXThaler',2,Inhaled,puffs,QDS,Dry Powder Inhaler,Y
+12837,SALBUTAMOL,5,Nebulised (via compressor),mg,Five times a day,Nebuliser Solution,Y
+12851,SALBUTAMOL,2.5,Nebulised (via compressor),mg,4H,Nebuliser Solution,Y
+13054,BECLOMETASONE AQUEOUS,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+13084,TIOTROPIUM 'RESPIMAT',5,Inhaled,microgram,Two puffs once daily,Inhaler,N
+13188,FOSTAIR 'NEXThaler',2,Inhaled,puffs,ON,Dry Powder Inhaler,N
+13267,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,QDS,Dry Powder Inhaler,Y
+13344,STERIMAR ISOtonic,3,BOTH nostrils,sprays,BD,Nasal Spray,N
+13358,SUMATRIPTAN,1,RIGHT nostril,sprays,AS DIRECTED BY PRESCRIBER,Nasal Spray,Y
+13472,SALBUTAMOL,5,Nebulised (via compressor),mg,4H,Nebuliser Solution,Y
+13605,FLUTICASONE CFC-FREE EVOHALER,2,Inhaled,puffs,BD,Inhaler,N
+13607,IPRATROPIUM BROMIDE,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+13826,DUORESP 'SPIROMAX' 160/4.5,1,Inhaled,puffs,OM,Dry Powder Inhaler,N
+14079,FLUTIFORM 125/5 CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+14091,SODIUM CHLORIDE,4,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 3 hours,Nebuliser Solution,N
+14099,STERIMAR ISOtonic,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+14120,SALMETEROL 'ACCUHALER',1,Inhaled,dose,BD,Dry Powder Inhaler,N
+14122,FOSTAIR 'NEXThaler',2,Inhaled,puffs,3H,Dry Powder Inhaler,Y
+14175,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+14333,SALBUTAMOL,5,Nebulised (via compressor),mg,BD,Nebuliser Solution,Y
+14353,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,Every 12 hours at 12am (MIDNIGHT) and 12pm (LUNCH),Inhaler,Y
+14488,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 3 hours,Nebuliser Solution,Y
+14520,STERIMAR ISOtonic,4,BOTH nostrils,sprays,QDS,Nasal Spray,N
+14569,COLISTIMETHATE 'PROMIXIN',1,Nebulised (via compressor),million units,BD,Nebuliser Solution,N
+14717,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,OM,Inhaler,Y
+14892,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,6H,Nebuliser Solution,N
+14939,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,6H,Dry Powder Inhaler,Y
+14996,SALBUTAMOL,10,Nebulised (via compressor),mg,TDS,Nebuliser Solution,N
+15091,SYMBICORT 'TURBOHALER',1,Inhaled,dose(s),QDS,Dry Powder Inhaler,Y
+15225,BECLOMETASONE 'QVAR EASI-BREATHE',1,Inhaled,puffs,BD,Inhaler,N
+15326,SALBUTAMOL,2.5,Nebulised (via compressor),mg,8H,Nebuliser Solution,Y
+15327,SALBUTAMOL,2.5,Nebulised (via compressor),mg,8H,Nebuliser Solution,N
+15331,SERETIDE 'ACCUHALER',2,Inhaled,dose,BD,Dry Powder Inhaler,N
+15437,TIOTROPIUM 'ZONDA',5,Inhaled,microgram,OM,Inhalation Powder Capsules,N
+15461,SALBUTAMOL 'AIROMIR' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,Y
+15489,FLUTICASONE PROPIONATE,1,BOTH nostrils,sprays,ON,Nasal Spray,N
+15504,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,6H,Inhaler,Y
+15510,FLUTICASONE FUROATE,2,BOTH nostrils,sprays,ON,Nasal Spray,N
+15586,SALBUTAMOL,2.5,Nebulised (via compressor),mg,3H,Nebuliser Solution,N
+15593,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every 2 hours,Nebuliser Solution,Y
+15613,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,BD,Inhaler,Y
+15688,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,TDS,Nebuliser Solution,Y
+15739,BECLOMETASONE 'QVAR AUTOHALER',50,Inhaled,microgram,BD,Inhaler,N
+15759,SALBUTAMOL 'AIROMIR AUTOHALER' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,Y
+15765,FLUTICASONE FUROATE,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+15766,AZELASTINE,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+15767,SALBUTAMOL,5,Nebulised (via compressor),mg,BD,Nebuliser Solution,N
+15768,TIOTROPIUM 'HANDIHALER',2,Inhaled,dose(s),OM,Dry Powder For Inhalation,N
+15769,SUMATRIPTAN,2,RIGHT nostril,sprays,OM,Nasal Spray,Y
+15773,SUMATRIPTAN,2,RIGHT nostril,sprays,BD,Nasal Spray,Y
+15837,TERBUTALINE 'TURBOHALER',2,Inhaled,dose(s),BD,Dry Powder Inhaler,Y
+15876,NICOTINE 'NICORETTE',1,Inhaled,dose(s),Every 30 minutes,Inhalator,Y
+15878,FLUTICASONE PROPIONATE,1,BOTH nostrils,sprays,OM,Nasal Spray,Y
+15991,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,Every hour,Inhaler,Y
+16442,BUDESONIDE,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+16497,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+16593,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,8H,Inhaler,Y
+16609,BUDESONIDE 'TURBOHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+17023,NICOTINE 'NICORETTE',1,Inhaled,dose(s),BD,Inhalator,Y
+17040,NICOTINE 'NICORETTE',1,Inhaled,dose(s),Every hour,Inhalator,Y
+17284,SALBUTAMOL 'ACCUHALER',2,Inhaled,dose,QDS,Dry Powder Inhaler,Y
+17291,SALBUTAMOL,5,Nebulised (via compressor),mg,Every 3 hours,Nebuliser Solution,Y
+17293,SODIUM CHLORIDE,1,Nebulised (via compressor),2.5ml Unit-Dose Neb,TDS,Nebuliser Solution,N
+17334,SYMBICORT 'TURBOHALER',4,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+17667,BECLOMETASONE 'QVAR AUTOHALER',1,Inhaled,puffs,BD,Inhaler,N
+17756,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+17764,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every 2 hours,Nebuliser Solution,N
+17765,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,6H,Nebuliser Solution,Y
+17800,TIOTROPIUM 'RESPIMAT',5,Inhaled,microgram,ON,Inhaler,N
+17845,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,8H,Nebuliser Solution,N
+18006,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,OM,Inhaler,N
+18129,SALBUTAMOL 'SALAMOL' CFC FREE,5,Inhaled,puffs,4H,Inhaler,Y
+18158,NICOTINE 'NICORETTE',1,Inhaled,dose(s),BD,Inhalator,N
+18273,SALBUTAMOL,10,Nebulised (via compressor),mg,QDS,Nebuliser Solution,Y
+18282,SALBUTAMOL,10,Nebulised (via compressor),mg,STAT,Nebuliser Solution,Y
+18293,DESMOPRESSIN,1,Choose Nostril,sprays,BD,Nasal Spray,N
+18484,SALBUTAMOL 'SALAMOL' CFC FREE,5,Inhaled,puffs,QDS,Inhaler,Y
+18487,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,5,Inhaled,puffs,4H,Inhaler,Y
+18532,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every 3 hours,Nebuliser Solution,Y
+18587,SALBUTAMOL 'SALAMOL' CFC FREE,3,Inhaled,puffs,QDS,Inhaler,Y
+18618,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,OM,Inhaler,Y
+18690,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,Every morning Friday to Sunday only,Inhaler,Y
+18862,FOSTAIR 'MDI' CFC FREE,4,Inhaled,puffs,BD,Inhaler,N
+19184,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,3H,Inhaler,Y
+19260,SALBUTAMOL 'EASYHALER',5,Inhaled,puffs,QDS,Dry Powder Inhaler,Y
+19265,FORMOTEROL 'EASYHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,Y
+19266,ACLIDINIUM BROMIDE,1,Inhaled,dose(s),BD,Dry Powder For Inhalation,Y
+19511,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Over 72 hours,Inhaler,Y
+19526,STERIMAR ISOtonic,1,BOTH nostrils,sprays,OD,Nasal Spray,N
+19528,FLUTICASONE PROPIONATE,3,Inhaled,dose(s),BD,Accuhaler,N
+19580,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,QDS,Nebuliser Solution,Y
+19693,SODIUM CHLORIDE,1,Nebulised (via compressor),2.5ml Unit-Dose Neb,BD,Nebuliser Solution,N
+19885,BECLOMETASONE AQUEOUS,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+19888,SALBUTAMOL,2.5,Nebulised (via compressor),mg,1 hourly (between 6am and midnight),Nebuliser Solution,N
+20003,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,3H,Inhaler,Y
+20087,SALBUTAMOL,2.5,Nebulised (via compressor),mg,3H,Nebuliser Solution,Y
+20185,TRELEGY 'ELLIPTA' 92micrograms/55micrograms/22micrograms,2,Inhaled,puffs,BD,Dry Powder Inhaler,N
+20192,TERBUTALINE 'TURBOHALER',2,Inhaled,dose(s),QDS,Dry Powder Inhaler,Y
+20226,FLUTICASONE PROPIONATE,2,BOTH nostrils,sprays,QDS,Nasal Spray,N
+20279,FOSTAIR 'NEXThaler',2,Inhaled,puffs,QDS,Dry Powder Inhaler,N
+20280,FLUTICASONE PROPIONATE,2,BOTH nostrils,sprays,BD,Nasal Spray,Y
+20380,FLUTICASONE PROPIONATE,2,BOTH nostrils,sprays,OD,Nasal Spray,N
+20480, ENTONOX (50% NITROUS OXIDE & 50% OXYGEN),1,Inhaled,inhalation,QDS,Inhalation,Y
+20661,BEVESPI AEROSPHERE 7.2 micrograms / 5 micrograms,2,Inhaled,inhalation,BD,Inhaler,N
+20723,IPRATROPIUM BROMIDE,2,Inhaled,puffs,TDS,Inhaler,Y
+20756,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,TDS,Inhaler,Y
+20757,SALBUTAMOL 'ACCUHALER',2,Inhaled,dose,TDS,Dry Powder Inhaler,Y
+21086,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 2 hours,Nebuliser Solution,Y
+21173,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every hour,Nebuliser Solution,Y
+21199,TRELEGY 'ELLIPTA' 92micrograms/55micrograms/22micrograms,2,Inhaled,puffs,OM,Dry Powder Inhaler,N
+21492,BECLOMETASONE CFC FREE 'CLENIL',1,Inhaled,puffs,BD,Inhaler,Y
+21630,AIRFLUSAL FORSPIRO,2,Inhaled,dose,BD,Dry Powder Inhaler,N
+22009,FLUTICASONE CFC-FREE EVOHALER,1,Inhaled,puffs,OM,Inhaler,N
+22072,NICOTINE 'NICORETTE',1,Inhaled,dose(s),TDS,Inhalator,Y
+22093,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,"08,12,14,18,22",Nebuliser Solution,N
+22102,BECLOMETASONE CFC FREE 'CLENIL',200,Inhaled,puffs,BD,Inhaler,N
+22488,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,BD,Inhaler,Y
+22612,NICOTINE 'NICORETTE',1,Inhaled,dose(s),4H,Inhalator,Y
+22710,SYMBICORT 'TURBOHALER',2,Inhaled,dose(s),OM,Dry Powder Inhaler,N
+22774,SYMBICORT 'MDI' CFC FREE,2,Inhaled,puffs,OM,Inhaler,N
+22851,UMECLIDINIUM 'ELLIPTA',2,Inhaled,dose,OM,Dry Powder Inhaler,N
+22888,NICOTINE 'NICORETTE',1,Inhaled,dose(s),3H,Inhalator,N
+23111,BECLOMETASONE AQUEOUS,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+23141,SODIUM CHLORIDE,4,Nebulised (via compressor),2.5ml Unit-Dose Neb,QDS,Nebuliser Solution,N
+23156,RELVAR 'ELLIPTA' 92micrograms / 22micrograms,1,Inhaled,dose,BD,Inhaler,N
+23369,FLUTICASONE FUROATE,1,BOTH nostrils,sprays,OM,Nasal Spray,Y
+23381,METHOXYFLURANE 'PENTHROX',1,Inhaled,Inhalation device,OM,Inhalation Device,Y
+23396,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,TDS,Inhaler,N
+23466,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,QDS,Dry Powder Inhaler,N
+23471,TIOTROPIUM 'HANDIHALER',1,Inhaled,dose(s),BD,Dry Powder For Inhalation,N
+23521,NICOTINE 'NICORETTE',1,Inhaled,dose(s),Every 2 hours,Inhalator,Y
+23736,NICOTINE,1,Oral,sprays,OM,Nasal Spray,Y
+24015,FLUTICASONE PROPIONATE,1,BOTH nostrils,sprays,OD,Nasal Spray,N
+24091,STERIMAR ISOtonic,2,BOTH nostrils,sprays,BD,Nasal Spray,Y
+24095,AEROCHAMBER (PLUS) STANDARD 'BLUE',1,Inhaled,device,OM,Inhalation Device,N
+24174,FOSTAIR 'NEXThaler',1,Inhaled,puffs,QDS,Dry Powder Inhaler,Y
+24175,SALBUTAMOL,5,Nebulised (via compressor),mg,Seven times a day (during the day),Nebuliser Solution,Y
+24176,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,BD,Inhaler,Y
+24251,AEROCHAMBER (PLUS) CHILD WITH MASK 'YELLOW',1,Inhaled,device,AS DIRECTED BY PRESCRIBER,Inhalation Device,N
+24255, ENTONOX (50% NITROUS OXIDE & 50% OXYGEN),1,Inhaled,inhalation,Every 30 minutes,Inhalation,Y
+24306,DYMISTA,2,BOTH nostrils,sprays,ON,Nasal Spray,N
+24309,SALBUTAMOL 'EASI-BREATHE' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+24349,TRELEGY 'ELLIPTA' 92micrograms/55micrograms/22micrograms,1,Inhaled,puffs,OM,Dry Powder Inhaler,Y
+24410,FLUTICASONE FUROATE,2,BOTH nostrils,sprays,OM,Nasal Spray,Y
+24501,SALBUTAMOL 'SALAMOL' CFC FREE,5,Inhaled,puffs,QDS,Inhaler,N
+24518,SALBUTAMOL 'SALAMOL' CFC FREE,4,Inhaled,puffs,QDS,Inhaler,N
+24533,STERIMAR ISOtonic,1,BOTH nostrils,sprays,TDS,Nasal Spray,Y
+24535,STERIMAR HYPERtonic,1,BOTH nostrils,sprays,TDS,Nasal Spray,N
+24536,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,3H,Inhaler,Y
+24544,SALBUTAMOL,5,Nebulised (via compressor),mg,3H,Nebuliser Solution,Y
+24667,PULMOZYME,5,Nebulised (via compressor),mg,BD,Nebuliser Solution,N
+24684,AEROCHAMBER (PLUS) STANDARD WITH MASK 'BLUE',1,Inhaled,device,QDS,Inhalation Device,N
+24690,NICOTINE 'NICORETTE',1,Inhaled,dose(s),OM,Inhalator,N
+24796,TIOTROPIUM 'RESPIMAT',2.5,Inhaled,microgram,BD,Inhaler,N
+24806,STERIMAR ISOtonic,1,BOTH nostrils,sprays,6H,Nasal Spray,N
+24908,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,PRN,Inhaler,Y
+24913,RELVAR 'ELLIPTA' 92micrograms / 22micrograms,1,Inhaled,dose,OD,Inhaler,N
+25104,TIOTROPIUM 'RESPIMAT',5,Inhaled,microgram,OD,Inhaler,N
+25215,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 2 hours,Nebuliser Solution,N
+25314,CICLESONIDE CFC FREE,2,Inhaled,puffs,OM,Inhaler,N
+25395,SALBUTAMOL 'AIROMIR AUTOHALER' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+25418,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every 15 minutes,Nebuliser Solution,Y
+25666,SALBUTAMOL,2.5,Nebulised (via compressor),mg,OD,Nebuliser Solution,N
+25680,STERIMAR ISOtonic,1,BOTH nostrils,sprays,ON,Nasal Spray,N
+25752,FLUTICASONE CFC-FREE EVOHALER,1,Inhaled,puffs,TDS,Inhaler,N
+25773,SALBUTAMOL,2.5,Nebulised (via compressor),mg,OM,Nebuliser Solution,Y
+25786,TRIAMCINOLONE 'NASACORT',2,BOTH nostrils,sprays,OM,Nasal Spray,N
+25797,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,4H,Inhaler,Y
+25833,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,OM,Inhaler,N
+25888,SALBUTAMOL,10,Nebulised (via compressor),mg,4H,Nebuliser Solution,Y
+25972,DUORESP 'SPIROMAX' 160/4.5,2,Inhaled,puffs,BD,Dry Powder Inhaler,Y
+26046,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,OM,Nebuliser Solution,N
+26047,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,3H,Nebuliser Solution,Y
+26065,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,3H,Nebuliser Solution,N
+26618,BECLOMETASONE CFC FREE 'CLENIL',1,Inhaled,puffs,OM,Inhaler,N
+26725,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),QDS,Dry Powder Inhaler,N
+26915,SALBUTAMOL,2.5,Nebulised (via compressor),mg,OM,Nebuliser Solution,N
+26932,SALMETEROL,1,Inhaled,dose,BD,Inhaler,N
+27040,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,Y
+27115,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+27157,IPRATROPIUM BROMIDE,2,BOTH nostrils,sprays,TDS,Nasal Spray,N
+27173,FLUTICASONE PROPIONATE,2,BOTH nostrils,sprays,OM,Nasal Spray,Y
+27282,FLUTICASONE PROPIONATE,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+27752,SALBUTAMOL 'EASYHALER',1,Inhaled,puffs,BD,Dry Powder Inhaler,Y
+27878,TRIMBOW 'MDI' CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+28025,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,6-12-6-12,Nebuliser Solution,N
+28026,SALBUTAMOL,5,Nebulised (via compressor),mg,4 times a day 6-12-6-12,Nebuliser Solution,N
+28027,SALBUTAMOL,2.5,Nebulised (via compressor),mg,4 times a day 6-12-6-12,Nebuliser Solution,N
+28209,SYMBICORT 'TURBOHALER',2,Inhaled,dose(s),ON,Dry Powder Inhaler,N
+28210,TIOTROPIUM 'ZONDA',20,Inhaled,microgram,OM,Inhalation Powder Capsules,N
+28388,SERETIDE 'ACCUHALER',2,Inhaled,dose,OM,Dry Powder Inhaler,N
+28441,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Every 3 hours,Inhaler,Y
+28567,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,N
+28626,FOSTAIR 'MDI' CFC FREE,3,Inhaled,puffs,BD,Inhaler,N
+28701, ENTONOX (50% NITROUS OXIDE & 50% OXYGEN),1,Inhaled,inhalation,OM,Inhalation,Y
+28761,FLUTICASONE PROPIONATE,1,Inhaled,dose(s),BD,Accuhaler,Y
+28837,MOMETASONE,2,BOTH nostrils,sprays,BD,Nasal Spray,Y
+28856,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,TDS,Inhaler,Y
+28994,SALBUTAMOL 'SALAMOL' CFC FREE,6,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+29062,FLUTICASONE FUROATE,2,BOTH nostrils,sprays,OD,Nasal Spray,N
+29067,DESMOPRESSIN,1,Choose Nostril,sprays,ON,Nasal Spray,N
+29103,SALBUTAMOL 'AIROMIR AUTOHALER' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,Y
+29120,ANORO 'ELLIPTA' 55microgram/22microgram,1,Inhaled,dose,BD,Dry Powder Inhaler,N
+29161,SIRDUPLA 25/250 CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+29290,SALBUTAMOL 'ACCUHALER',2,Inhaled,dose,Every hour,Dry Powder Inhaler,Y
+29291,TIOTROPIUM 'ZONDA',10,Inhaled,microgram,ON,Inhalation Powder Capsules,N
+29313,FLUTICASONE,2,Nebulised (via compressor),mg,BD,Nebuliser Solution,Y
+29492,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,AS DIRECTED BY PRESCRIBER,Inhaler,Y
+29711,STERIMAR HYPERtonic,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+29757,XYLOMETAZOLINE,1,BOTH nostrils,sprays,TDS,Nasal Spray,Y
+29880,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,4H,Inhaler,Y
+29882,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,4H,Inhaler,Y
+29974,UMECLIDINIUM 'ELLIPTA',1,Inhaled,dose,OD,Dry Powder Inhaler,N
+30053,AEROCHAMBER (PLUS) STANDARD 'BLUE',1,Inhaled,device,QDS,Inhalation Device,Y
+30309,STERIMAR ISOtonic,1,BOTH nostrils,sprays,OD,Nasal Spray,Y
+30487,SALMETEROL,2,Inhaled,dose,OM,Inhaler,N
+30546,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,4H,Inhaler,Y
+30568,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Seven times a day (during the day),Inhaler,Y
+30696,SALBUTAMOL 'EASI-BREATHE' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+30805,BUDESONIDE 'EASYHALER',1,Inhaled,dose(s),OM,Dry Powder Inhaler,N
+31098,FOSTAIR 'NEXThaler',1,Inhaled,puffs,OM,Dry Powder Inhaler,N
+31153,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),8H,Dry Powder Inhaler,Y
+31181,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),TDS,Dry Powder Inhaler,Y
+31348,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,BD,Inhaler,N
+31414,NICOTINE 'NICORETTE',1,Inhaled,dose(s),OM,Inhalator,Y
+31475,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,TDS,Dry Powder Inhaler,Y
+31611,TIOTROPIUM 'RESPIMAT',10,Inhaled,microgram,OM,Inhaler,N
+31758,TRIMBOW 'MDI' CFC FREE,2,Inhaled,puffs,BD,Inhaler,Y
+31905,STERIMAR HYPERtonic,2,BOTH nostrils,sprays,QDS,Nasal Spray,Y
+31965,SODIUM CHLORIDE,1,Nebulised (via compressor),2.5ml Unit-Dose Neb,6H,Nebuliser Solution,Y
+31987,SALBUTAMOL 'EASYHALER',2,Inhaled,puffs,QDS,Dry Powder Inhaler,N
+32097,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,Every 30 minutes,Nebuliser Solution,N
+32299,TIOTROPIUM 'ZONDA',10,Inhaled,microgram,OD,Inhalation Powder Capsules,N
+32429,STERIMAR ISOtonic,1,BOTH nostrils,sprays,8H,Nasal Spray,Y
+32498,DUORESP 'SPIROMAX' 160/4.5,1,Inhaled,puffs,BD,Dry Powder Inhaler,Y
+32627,XYLOMETAZOLINE,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+32677,CICLESONIDE CFC FREE,1,Inhaled,puffs,ON,Inhaler,N
+32757,AEROCHAMBER (PLUS) STANDARD WITH MASK 'BLUE',1,Inhaled,device,QDS,Inhalation Device,Y
+32982,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,REMINDER- 4 X DAY - CHECK PAPER CHART,Inhaler,Y
+33002,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,3H,Inhaler,Y
+33042,BUDESONIDE,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+33071,FLUTICASONE,500,Nebulised (via compressor),microgram,BD,Nebuliser Solution,N
+33176,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Every 15 minutes,Inhaler,Y
+33192,BUDESONIDE,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+33193,BUDESONIDE,1,BOTH nostrils,sprays,ON,Nasal Spray,N
+33223,ZOLMITRIPTAN,1,RIGHT nostril,dose(s),AS DIRECTED BY PRESCRIBER,Nasal Spray,Y
+33233,SALBUTAMOL,5,Nebulised (via compressor),mg,3H,Nebuliser Solution,N
+33234,AEROCHAMBER (PLUS) STANDARD WITH MASK 'BLUE',2,Inhaled,device,BD,Inhalation Device,N
+33414,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,6H,Inhaler,Y
+33442,ANORO 'ELLIPTA' 55microgram/22microgram,2,Inhaled,dose,OM,Dry Powder Inhaler,N
+33468,ANORO 'ELLIPTA' 55microgram/22microgram,1,Inhaled,dose,ON,Dry Powder Inhaler,N
+33492,CICLESONIDE CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+33573,SERETIDE 'ACCUHALER',1,Inhaled,dose,OM,Dry Powder Inhaler,N
+33623,SALBUTAMOL,5,Nebulised (via compressor),mg,Every hour,Nebuliser Solution,Y
+33624,SODIUM CROMOGLICATE 'INTAL' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,N
+33625,SALBUTAMOL,5,Nebulised (via compressor),mg,Every hour,Nebuliser Solution,N
+33720,TRIMBOW 'MDI' CFC FREE,2,Inhaled,puffs,OM,Inhaler,N
+33891,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,As needed,Inhaler,Y
+33956,BECLOMETASONE CFC FREE 'CLENIL',100,Inhaled,puffs,BD,Inhaler,N
+33993,SALBUTAMOL 'AIROMIR AUTOHALER' CFC FREE,2,Inhaled,puffs,4H,Inhaler,Y
+34146,FOSTAIR 'NEXThaler',1,Inhaled,puffs,BD,Dry Powder Inhaler,Y
+34286,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Seven times a day (during the day),Nebuliser Solution,N
+34380,DYMISTA,1,BOTH nostrils,sprays,OM,Nasal Spray,N
+34381,DYMISTA,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+34425,MOMETASONE,4,BOTH nostrils,sprays,OM,Nasal Spray,Y
+34439,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,4,Inhaled,puffs,QDS,Inhaler,Y
+34467,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,8H,Nebuliser Solution,Y
+34618,STERIMAR ISOtonic,1,BOTH nostrils,sprays,QDS,Nasal Spray,Y
+34961,FLUTICASONE CFC-FREE EVOHALER,4,Inhaled,puffs,ON,Inhaler,N
+34962,FLUTICASONE CFC-FREE EVOHALER,3,Inhaled,puffs,OM,Inhaler,N
+35022,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,Seven times a day (during the day),Nebuliser Solution,Y
+35044,DUORESP 'SPIROMAX' 160/4.5,2,Inhaled,puffs,OD,Dry Powder Inhaler,N
+35105,AEROCHAMBER (PLUS) STANDARD 'BLUE',1,Inhaled,device,4H,Inhalation Device,N
+35161,FOSTAIR 'MDI' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,N
+35230,FOSTAIR 'MDI' CFC FREE,1,Inhaled,puffs,OM,Inhaler,N
+35245,ULTIBRO 'BREEZHALER' 85/43micrograms,1,Inhaled,dose(s),OM,Dry Powder For Inhalation,Y
+35344,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,4 times per day,Nebuliser Solution,N
+35404,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,2,Inhaled,puffs,QDS,Inhaler,N
+35477,IPRATROPIUM BROMIDE,1,Inhaled,puffs,QDS,Inhaler,N
+35488,SODIUM CHLORIDE,4,Nebulised (via compressor),2.5ml Unit-Dose Neb,4H,Nebuliser Solution,N
+35494,FLUTIFORM 125/5 CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+35631,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Five times a day,Inhaler,Y
+35846,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,OM,Dry Powder Inhaler,Y
+35879,SALBUTAMOL,2.5,Nebulised (via compressor),mg,PRN,Nebuliser Solution,Y
+35963,SALBUTAMOL 'SALAMOL' CFC FREE,6,Inhaled,puffs,QDS,Inhaler,Y
+36174,CICLESONIDE CFC FREE,1,Inhaled,puffs,OM,Inhaler,N
+36175,CICLESONIDE CFC FREE,1,Inhaled,puffs,QDS,Inhaler,N
+36203,TERBUTALINE 'TURBOHALER',1,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+36214,BUDESONIDE,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+36398,MOMETASONE,2,BOTH nostrils,sprays,OD,Nasal Spray,N
+36629,NICOTINE 'NICORETTE',1,Inhaled,dose(s),ON,Inhalator,N
+36907,FLUTICASONE PROPIONATE,1,Inhaled,dose(s),OM,Accuhaler,N
+37050,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,6H,Inhaler,N
+37074,MOMETASONE,1,BOTH nostrils,sprays,ON,Nasal Spray,N
+37190,STERIMAR HYPERtonic,2,BOTH nostrils,sprays,TDS,Nasal Spray,N
+37191,SALBUTAMOL,5,Nebulised (via compressor),mg,8H,Nebuliser Solution,Y
+37192,SALBUTAMOL 'AIROMIR' CFC FREE,1,Inhaled,puffs,6H,Inhaler,Y
+37280,MOMETASONE,4,BOTH nostrils,sprays,OD,Nasal Spray,Y
+37281,MOMETASONE,4,BOTH nostrils,sprays,OD,Nasal Spray,N
+37285,NICOTINE 'NICORETTE',2,Inhaled,dose(s),Every 30 minutes,Inhalator,Y
+37298,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,as required,Inhaler,Y
+37299,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,as required,Inhaler,Y
+37345,BECLOMETASONE 'EASYHALER',2,Inhaled,puffs,BD,Inhaler,N
+37444,SODIUM CHLORIDE,10,Nebulised (via compressor),2.5ml Unit-Dose Neb,TDS,Nebuliser Solution,Y
+37649,STERIMAR ISOtonic,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+37805,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,OD,Nebuliser Solution,N
+37845,STERIMAR ISOtonic,2,BOTH nostrils,sprays,TDS,Nasal Spray,Y
+37954,SODIUM CHLORIDE,2,Nebulised (via compressor),2.5ml Unit-Dose Neb,00:00,Nebuliser Solution,Y
+38372,BECLOMETASONE 'EASI-BREATHE',2,Inhaled,puffs,BD,Inhaler,N
+38392,TIOTROPIUM 'HANDIHALER',3,Inhaled,dose(s),OM,Dry Powder For Inhalation,N
+38435,COLISTIMETHATE 'PROMIXIN',0.5,Nebulised (via compressor),million units,BD,Nebuliser Solution,N
+38868,STERIMAR ISOtonic,3,BOTH nostrils,sprays,QDS,Nasal Spray,N
+39140,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,OM,Inhaler,N
+39206,SALBUTAMOL,5,Nebulised (via compressor),mg,Five times a day,Nebuliser Solution,N
+39258,SALMETEROL,2,Inhaled,dose,BD,Inhaler,Y
+39337,SYMBICORT 'MDI' CFC FREE,4,Inhaled,puffs,BD,Inhaler,N
+39338,BUDESONIDE 'TURBOHALER',4,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+39409,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,TDS,Nebuliser Solution,Y
+39501,STERIMAR HYPERtonic,1,BOTH nostrils,sprays,BD,Nasal Spray,N
+39572,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,Every 15 minutes,Inhaler,Y
+39614,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,back to back,Nebuliser Solution,Y
+39615,SALBUTAMOL,5,Nebulised (via compressor),mg,Back to back,Nebuliser Solution,Y
+39674,SPIOLTO 2.5microgram/2.5microgram/dose 'RESPIMAT',2,Inhaled,inhalation,ON,Inhaler,N
+39753,DUORESP 'SPIROMAX' 160/4.5,2,Inhaled,puffs,OM,Dry Powder Inhaler,N
+39805,XYLOMETAZOLINE,2,BOTH nostrils,sprays,BD,Nasal Spray,Y
+39813,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,PRN,Inhaler,Y
+39917,SALBUTAMOL 'AIROMIR AUTOHALER' CFC FREE,2,Inhaled,puffs,6H,Inhaler,Y
+39930,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,Every 30 minutes,Inhaler,Y
+39932,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,Every 30 minutes,Inhaler,Y
+40016,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,3H,Nebuliser Solution,N
+40134,TIOTROPIUM 'ZONDA',10,Inhaled,microgram,BD,Inhalation Powder Capsules,N
+40196,BUDESONIDE 'TURBOHALER',400,Inhaled,dose(s),BD,Dry Powder Inhaler,N
+40197,MOMETASONE,50,BOTH nostrils,sprays,OM,Nasal Spray,N
+40199,SUMATRIPTAN,1,RIGHT nostril,sprays,OM,Nasal Spray,Y
+40230,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,Every 3 hours,Nebuliser Solution,N
+40234,SALBUTAMOL 'VENTOLIN EVOHALER' CFC FREE,1,Inhaled,puffs,Three times a day when required,Inhaler,Y
+40273,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,6H,Nebuliser Solution,Y
+40295,AZELASTINE,2,BOTH nostrils,sprays,BD,Nasal Spray,N
+40380,BECLOMETASONE CFC FREE 'CLENIL',2,Inhaled,puffs,BD,Inhaler,Y
+40410,SALBUTAMOL 'AIROMIR' CFC FREE,2,Inhaled,puffs,6H,Inhaler,N
+40415,TIOTROPIUM 'ZONDA',10,Inhaled,microgram,Each day at 11am,Inhalation Powder Capsules,N
+40461,NICOTINE 'NICORETTE',1,Inhaled,dose(s),AS DIRECTED BY PRESCRIBER,Inhalator,Y
+40482,FOSTAIR 'NEXThaler',1,Inhaled,puffs,OD,Dry Powder Inhaler,N
+40682,STERIMAR ISOtonic,1,BOTH nostrils,sprays,4H,Nasal Spray,N
+40715,SALBUTAMOL 'SALAMOL' CFC FREE,1,Inhaled,puffs,BD,Inhaler,N
+41085,SALBUTAMOL,5,Nebulised (via compressor),mg,Seven times a day (during the day),Nebuliser Solution,N
+41167,DUORESP 'SPIROMAX' 160/4.5,2,Inhaled,puffs,TDS,Dry Powder Inhaler,N
+41208,BECLOMETASONE AQUEOUS,1,BOTH nostrils,sprays,BD,Nasal Spray,Y
+41214,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every 3 hours,Nebuliser Solution,N
+41327,SALBUTAMOL 'SALAMOL' CFC FREE,2,Inhaled,puffs,OD,Inhaler,Y
+41409,TIOTROPIUM 'ZONDA',10,Inhaled,microgram,OM,Inhalation Powder Capsules,Y
+41433,IPRATROPIUM BROMIDE,250,Nebulised (via compressor),microgram,TDS,Nebuliser Solution,Y
+41438,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,OM,Nebuliser Solution,Y
+41458,SODIUM CHLORIDE,1,Nebulised (via compressor),4ml Unit-Dose Vial,AS DIRECTED BY PRESCRIBER,Nebuliser Solution,N
+41554,IPRATROPIUM BROMIDE,1,BOTH nostrils,sprays,TDS,Nasal Spray,N
+41624,SALBUTAMOL 'EASI-BREATHE' CFC FREE,1,Inhaled,puffs,QDS,Inhaler,N
+42149,IPRATROPIUM BROMIDE,500,Nebulised (via compressor),microgram,"10:00, 15:00, 20:00, 00:00",Nebuliser Solution,N
+42333,TIOTROPIUM 'RESPIMAT',7.5,Inhaled,microgram,OM,Inhaler,N
+42401,SYMBICORT 'TURBOHALER',2,Inhaled,dose(s),QDS,Dry Powder Inhaler,Y
+42435,SALBUTAMOL 'ACCUHALER',1,Inhaled,dose,8H,Dry Powder Inhaler,Y
+42444,SYMBICORT 'TURBOHALER',2,Inhaled,dose(s),QDS,Dry Powder Inhaler,N
+42472,SALBUTAMOL,2.5,Nebulised (via compressor),mg,Every hour,Nebuliser Solution,N
+42671,IPRATROPIUM BROMIDE,2,BOTH nostrils,sprays,BD,Nasal Spray,Y
+42689, ENTONOX (50% NITROUS OXIDE & 50% OXYGEN),1,Inhaled,inhalation,BD,Inhalation,Y
+42778,STERIMAR ISOtonic,2,BOTH nostrils,sprays,OM,Nasal Spray,N
+42813,MANNITOL DIAGNOSTIC KIT,1,Inhaled,pack,AS DIRECTED BY PRESCRIBER,Dry Powder For Inhalation,N
+45889,TIOTROPIUM 'RESPIMAT',5,Inhaled,microgram,OM,Inhaler,Y
+46876,SALBUTAMOL 'EASYHALER',1,Inhaled,puffs,QDS,Dry Powder Inhaler,N
