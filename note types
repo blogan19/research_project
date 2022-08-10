@@ -1,17 +1,43 @@
 Intervention Type	Example
-Incorrect Dose	
+Incorrect DoseReductions
     Apixaban has been prescribed at a dose of 2.5mg BD patient normally takes 5mg BD please increase dose
+Incorrect Medication	
+    Prochlorperazine has been prescribed instead of promethazine
+
+Duplicated Therapy Prescribed	
+    Flucloxacillin has been prescribed both as IV and Oral route 
+    Drug x has been prescribed twice please review 
+    drug x is the same medication class as y 
+    drug y is also a calcium channel blocker
+    Drug x and Drug y have the same mechanism of action 
+    Drug x and y work in the same way 
+    
+Medication is contraindicated	
+    Cyclizine is contraindicated in heart failure review need for alternative antiemetic
+    several of these medications are contraindicated in (drug list )
+    Drug x is not recomended in 
+    x condition means that drug y is not advised 
+    X guidance advises that drug y should not be used in patients with 
+    Mr Smith has unstable angina. Drug y has been newly started. This goes against hospital policy as it is a knwon caution/CI
+
+Incorrect dose increases
+    x has been increased on admission
+    The dose of y has been increase however there is no documentation int the notes
+    drug x has been increased above the maximum dose 
+    the plan was to increase the dose of y however the dose for x has been increasedT
+    The dose has been increased above the recomended dose for a patient with a renal function of
+
+
 
 Incorrect Frequency	
     Gabapentin prescribed once daily patient normally takes TDS please amend frequency
 
-Incorrect Medication	
-    Prochlorperazine has been prescribed instead of promethazine
-    
-Duplicated Therapy Prescribed	
-    Flucloxacillin has been prescribed both as IV and Oral route 
-Medication is contraindicated	
-    Cyclizine is contraindicated in heart failure review need for alternative antiemetic
+
+
+
+
+
+
 Medication Prescribed with known allergy	
     Patient has previously had an allergic reaction to trimethoprim please review 
 Incorrect time of administration	

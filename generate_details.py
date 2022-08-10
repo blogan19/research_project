@@ -13,8 +13,8 @@ def Patient(type):
 
     if type == 'gendered':
         return genderedName
-    else:
-        return [name]
+    elif type == '':
+        return [names.get_full_name()]
 
 def Relative():
     relatives = {
@@ -92,7 +92,10 @@ def HCP():
         2: [('a','o'),('doctor','o')],
         3: [('a','o'),('nurse','o')],
         4: [('a','o'),('specialist','o'),('nurse','o')],
-        5: [('Dr','o'),(names.get_last_name(),'o')]
+        5: [('Dr','o'),(names.get_last_name(),'o')],
+        6: [('hepatologist','o')],
+        7: [('consultant','o')],
+        8: [('surgeon','o')]
     }
     choice = random.randrange(0,len(hcp),1)
     return hcp[choice]
@@ -182,6 +185,10 @@ def pharmacokineticChange():
     choice = random.randrange(0,len(changes),1)
     return [changes[choice]]
 
+def pharmokineticIssue():
+    issue = ['poor renal function','liver impairment','low body weight','obesity','malnutrition','reduced renal function','poor kidney function','reduced liver clearance','low volume of distribution','hypoperfusion of kidneys','high output stoma','low albumin levels']
+    return [random.choice(issue)]
+
 def randomGuidance():
     guidance = {
         0: "bnf",
@@ -190,9 +197,34 @@ def randomGuidance():
         3: "summary of product characteritics",
         4: "spc",
         5: "British National formulary",
-        6: "renal drug database"
+        6: "renal drug database",
+        7: "local policy",
+        8: "trust guidance"
     }
     choice = random.randrange(0,len(guidance),1)
     return [guidance[choice]]
 
-   
+def randomDrugClass():
+    classes = ['calcium channel blocker','cardiac glycoside','ace inhibitor','beta blocker','penicillin','Direct oral anticoagulant','macrolide','sulphonylurea','biguanide','carbonic anhydrase inhibitor','aminoglycoside','glycopeptide','Dipeptidylpeptidase-4 inhibitor','Phosphodiesterase type-5 inhibitor']
+    return [random.choice(classes)]
+
+def ivostReasons():
+    ivosts = ['patient no longer nill by mouth','patient now able to swallow','patient no longe NBM','patient now eaiting and drinking','biovability of oral drug is near complete']
+    return [random.choice(ivosts)]
+
+def receptorTypes():
+    receptor = ['beta adrenoreceptors','penicillin binding protein','beta 2 receptors','calcium channel receptors','']
+
+
+def contraindicationType():
+    # drug x in contraindicated in....
+    contraindications =  ['Acute myocardial infarction','cardiogenic shock','congenital QT syndrome','immediately after cerebrovascular accident','patients dependent on pacemaker','second- and third-degree heart block','severe hypotension','sick-sinus syndrome','sino-atrial block',   'unstable angina','unstable or acute heart failure','Atrial fibrillation','mild to moderate hypotension','retinitis pigmentosa','Arrhythmias', 'atrioventricular block', 'dizziness', 'headache', 'hypertension', 'vision disorders','Abdominal pain','angioedema','constipation','diarrhoea','eosinophilia','hyperuricaemia','hypotension','muscle cramps','nausea','QT interval prolongation','skin reactions','syncope','vertigo']
+
+    return [random.choice(contraindications)]
+
+def sideEffects():
+    sideEffects = ['Acute myocardial infarction','cardiogenic shock','congenital QT syndrome', 'dizziness', 'headache', 'hypertension', 'vision disorders','Abdominal pain','angioedema','constipation','diarrhoea','eosinophilia','hyperuricaemia','hypotension','muscle cramps','nausea','QT interval prolongation','skin reactions','syncope','vertigo']
+    return [random.choice(sideEffects)]
+
+def planAuthor():
+    return random.choice([['Dr'],['Consultant'],['registrar'],['ward round'],['clinical notes'],['on call dr'],['house officer'],['SHO'],['specialist registrar'],['microbiologist'],['cardiologist'],['respiratory conculstant'],['hepatologist'],['gastroenterologist'],['elderly care consultant'],['AKI team'],['diabetes specialist nurses']])

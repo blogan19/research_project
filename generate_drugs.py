@@ -21,7 +21,7 @@ def medicationList(drugNo):
     
     return drugArray
 
-def randomDrug(df): 
+def randomDrug(df,type): 
     reductions = pd.read_csv(df)
     sample = reductions.sample(1).reset_index()
 
@@ -38,8 +38,17 @@ def randomDrug(df):
             drug_tag.append((x,"I-Drug"))
 
     #Dose
-    dose = float(sample['primary_dose'][0])
-    new_dose = dose/2
+    dose = sample['primary_dose'][0]
+    if isinstance(dose, str):
+        dose = dose.replace(',','')
+    dose = float(dose)
+    if type == 'reduce':
+        new_dose = dose/2
+    if type == 'increase': 
+        new_dose = dose*2
+    else:
+        new_dose = random.choice([dose*2,dose/2])
+    
 
     if dose.is_integer():
         dose = int(dose)
@@ -49,7 +58,7 @@ def randomDrug(df):
 
     #Unit 
     unit = sample['primary_dose_description'][0]
-    if unit == 'tablet' or unit == 'capsule':
+    if unit == 'tablet' or unit == 'capsule' or unit == 'patch' or unit == 'application':
         dose = f"{dose} {unit}s"
         new_dose = f"{new_dose} {unit}s"
     else: 
@@ -84,11 +93,14 @@ def randomDrug(df):
 
     return medication
 
-def randomOral():
-   return randomDrug("oral_cleaned.csv")
+def randomOral(changeType):
+   return randomDrug("oral_cleaned.csv",changeType)
 
-def randomInject():
-    return randomDrug("injection_cleaned.csv")
+def randomInject(changeType):
+    return randomDrug("injection_cleaned.csv",changeType)
 
-def randomInhaled(): 
-    return randomDrug('inhaled_cleaned.csv')
+def randomInhaled(changeType): 
+    return randomDrug('inhaled_cleaned.csv',changeType)
+
+def randomAny(changeType):
+    return randomDrug('drug_list_dose_clean.csv',changeType)
