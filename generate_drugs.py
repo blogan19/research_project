@@ -2,6 +2,34 @@ import pandas as pd
 import numpy as np
 import random
 
+from generate_details import randomFrequency
+
+
+def frequency_convert(freq):
+    frequency_conversions = {
+        'QDS': ("four times daily",4),
+        '6H': ("6 hourly",4),
+        "OM": ("each morning",1),
+        "ON": ("each night",1),
+        "BD": ("twice daily",2),
+        "3H": ("three hourly",8),
+        "4H": ("four hourly",6),
+        "TDS": ("three times daily",3),
+        "OD": ("once daily",1),
+        "8H": ("eight hourly",3),
+        "12H": ("twelve hourly",2),
+        "Five times a day": ("five times daily",5),
+        "Six times a day": ("six times daily",6),
+        "2H": ("2 hourly",12)
+    }
+    
+    dose = frequency_conversions.get(freq)
+    if dose != None:
+        # if not in list just return once daily because cba
+        return ("once daily",0)
+    else:
+        return(freq)
+
 def medicationList(drugNo):
     #generates a random medication list 
     df = pd.read_csv('oral_cleaned.csv')
@@ -24,7 +52,7 @@ def medicationList(drugNo):
 def randomDrug(df,type): 
     reductions = pd.read_csv(df)
     sample = reductions.sample(1).reset_index()
-
+    
     drug = sample['drug'][0].split(" ") 
     
     #Drug
@@ -85,13 +113,43 @@ def randomDrug(df,type):
         else: 
             newDose_tag.append((x,"I-Dose"))
 
+    route = sample['route'][0].split(" ")
+    route_tag = []
+    for i,x in enumerate(route):
+        if i == 0:
+            route_tag.append((x,"B-Route"))
+        elif i == len(drug)-1:
+            route_tag.append((x,"L-Route"))
+        else: 
+            route_tag.append((x,"I-Route"))
+
+    
+    frequency = sample['frequency_description'][0]
+    frequency = str(frequency)
+    frequency_tag = []
+    freq = frequency_convert(frequency)[0].split(" ")
+    for i,x in enumerate(freq):
+        if i == 0:
+            frequency_tag.append((x,"B-Freq"))
+        elif i == len(drug)-1:
+            frequency_tag.append((x,"L-Freq"))
+        else: 
+            frequency_tag.append((x,"I-Freq"))
+
+    
+
     medication = {
         "drugName" : drug_tag,
         "dose": dose_tag,
         "newdose": newDose_tag,
+        "route": route_tag,
+        "frequency": frequency_tag
     }
 
     return medication
+
+
+
 
 def randomOral(changeType):
    return randomDrug("oral_cleaned.csv",changeType)

@@ -199,7 +199,8 @@ def randomGuidance():
         5: "British National formulary",
         6: "renal drug database",
         7: "local policy",
-        8: "trust guidance"
+        8: "trust guidance",
+        9: "medicines information department"
     }
     choice = random.randrange(0,len(guidance),1)
     return [guidance[choice]]
@@ -228,3 +229,97 @@ def sideEffects():
 
 def planAuthor():
     return random.choice([['Dr'],['Consultant'],['registrar'],['ward round'],['clinical notes'],['on call dr'],['house officer'],['SHO'],['specialist registrar'],['microbiologist'],['cardiologist'],['respiratory conculstant'],['hepatologist'],['gastroenterologist'],['elderly care consultant'],['AKI team'],['diabetes specialist nurses']])
+
+def allergyReaction():
+    return [random.choice(['rash','stevens johnson syndrome','nausea','exacerbation of myasthenia gravis','diarrhoea','vomitting','hives','itch'])]
+
+def medRecSource():
+    return [random.choice(['Summary Care Record','GP Record','Latest Clinic Letter','MAR Chart','Nursing home MAR Chart','relative', 'inpatient drug chart'])]
+
+def administrationTimes():
+    return [random.choice(['in the morning','at night','at lunchtime','before food','after food','in the evening'])]
+
+def randomIndication():
+    return [random.choice(['hypertension','diabetes','high blood pressure','copd','asthma','community acquired pneumonia','CAP','hospital acquired pneumonia','HAP','urinary tract infection','UTI','endocarditis','prostatitis','epilepsy','parkinsons disease','alzheimers disease','dementia'])]
+
+
+def randomBiochem():
+    biochem = {
+        0: {
+            'test': 'potassium',
+            'inrange': str(random.randint(35,50)/10),
+            'low': str(random.randint(2,35)/10),
+            'high': str(random.randint(5,7)/10),
+            'unit': 'mmol/L'
+        },
+        1: {
+            'test': 'sodium',
+            'inrange': str(random.randint(133,150)),
+            'low': str(random.randint(120,133)),
+            'high': str(random.randint(150,160)),
+            'unit': 'mmol/L'
+        },
+        2: {
+            'test': 'calcium',
+            'inrange': str(random.randint(220,262)/100),
+            'low': str(random.randint(180,220)/10),
+            'high': str(random.randint(262,320)/100),
+            'unit': 'mmol/L'
+        },
+        3: {
+            'test': 'magnesium',
+            'inrange': str(random.randint(75,150)),
+            'low': str(random.randint(20,75)),
+            'high': str(random.randint(150,200)),
+            'unit': 'mmol/L'
+        },
+        4: {
+            'test': 'phosphate',
+            'inrange': str(random.randint(80,150)/100),
+            'low': str(random.randint(10,80)/100),
+            'high': str(random.randint(150,240)/100),
+            'unit': 'mmol/L'
+        }
+    }
+    choice = random.randrange(0,len(biochem),1)
+    return biochem[choice]
+
+def randomFrequency(firstFrequency):
+    frequency = firstFrequency
+    while firstFrequency == frequency:
+        frequency = random.choice(["TDS","BD","OD","OM","ON","QDS","BID","TID","PRN","when required","four times daily","6 hourly","each morning","each night","twice daily","three hourly","four hourly", "three times daily","once daily","eight hourly","twelve hourly","five times daily","six time daily","2 hourly"])
+        freq_tag = []
+
+        frequency = frequency.split(" ")
+        if len(frequency) == 1:
+            return [(frequency[0],"B-Freq")]
+        else:
+            for i,x in enumerate(frequency):
+                if i == 0:
+                    freq_tag.append((x,"B-Freq"))
+                elif i == len(freq_tag)-1:
+                    freq_tag.append((x,"L-Freq"))
+                else: 
+                    freq_tag.append((x,"I-Freq"))
+            print(freq_tag)
+            return freq_tag
+
+def randomRoute(firstRoute):
+    route = firstRoute
+    while route == firstRoute:
+        route = random.choice(["oral","IV","intravenous","intramuscular","eye","inhaled","sublingually","PO","NG","PEG","NJ","Via Enteral Feeding Tube"])
+        route_Tag = []
+
+        route = route.split(" ")
+        if len(route) == 1:
+            route_Tag.append((route[0],"B-Route"))
+        else:
+            for i,x in enumerate(route):
+                if i == 0:
+                    route_Tag.append((x,"B-Route"))
+                elif i == len(route_Tag)-1:
+                    route_Tag.append((x,"L-Route"))
+                else: 
+                    route_Tag.append((x,"I-Route"))
+            print(route_Tag)
+    return route_Tag

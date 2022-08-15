@@ -27,29 +27,49 @@ Incorrect dose increases
     the plan was to increase the dose of y however the dose for x has been increasedT
     The dose has been increased above the recomended dose for a patient with a renal function of
 
-
+Medication Prescribed with known allergy	
+    Patient has previously had an allergic reaction to trimethoprim please review 
+    Allergy status has not bee updated and patient has previously had an allergic reaction to this medication 
+    Risk of cross reaction with allergy 
+    Patient has not tolerated this in the past
 
 Incorrect Frequency	
     Gabapentin prescribed once daily patient normally takes TDS please amend frequency
 
-
-
-
-
-
-
-Medication Prescribed with known allergy	
-    Patient has previously had an allergic reaction to trimethoprim please review 
 Incorrect time of administration	
     Patient prescribed ramipril in the morning would it be more appropriate to start at night
+
+Intravenous to Oral switch	
+    Gentamicin has been prescribed for 5 days review need to switch to an oral alternative
 Incorrect route of administration	
     Review route of administration. Ranitidine is prescribed orally however all medications are to be administered via the PEG
+    swallowing difficulties
+
+Unclear indication for medication
+    No clear indication for tamsulosin please review need to continue
+
+Inadequate monitoring	
+    Review need to take a digoxin level 
+    drug c requires monitoring of randomLevel
+
+
+    
 Dose adjustment required	Patients renal function has improved please review need to increase dose of enoxaparin to 70mg OD
-Inadequate monitoring	Review need to take a digoxin level 
-Unclear indication for medication	No clear indication for tamsulosin please review need to continue
+
+
 Duration of prescription has exceeded course length	Amoxicillin has been prescribed for 7 days please review need to discontinue
 Medication overprescribing	Patient has been prescribed betahistine 8mg tablets however they no longer take this medication and therefore needs discontinuing 
 Drug interaction	Rifampicin will reduce the plasma concentration of clarithromycin due to an interaction review need to switch antibiotics
-Intravenous to Oral switch	Gentamicin has been prescribed for 5 days review need to switch to an oral alternative
+
 Transition Errors	Patients dose of bisoprolol was increased from 2.5mg to 5mg last admission however the GP record has not been updated. Please review need to increase dose
 Poor compliance	Patient struggles with taking alfusozin three times daily please review need to switch to a once daily preparation
+
+
+my intervention types
+ - start this medication
+ - switch to this medication as more cost effective or nice guidance recomends etc
+
+
+
+ NEED TO SORT OUT ONE WORD THINGS BEING LABELLED AS L-DRUG
+ Need a weighting system to produce more of certain types of label

@@ -1,28 +1,55 @@
-represcribeActions = {
-    0: [('represcribe','B-Action')],
-    1: [('re-prescribe','B-Action')],
-    2: [('ammend','B-Action')],
-    3: [('review','B-Action')],
-    4: [('alter', 'B-Action')],
-    5: [('change','B-Action')]
+import random
 
-}
-discontinueActions= {
-    0: [('discontinue','B-Action')],
-    1: [('stop','B-Action')],
-    2: [('delete','B-Action')],
-    3: [('remove','B-Action')],
-    4: [('suspend','B-Action')],
-    5: [('temporarily','B-Action'),('suspend','L-Action')]
-}
-discontinueActionPastTense = {
-    0: [('discontinued','B-Action')],
-    1: [('stopped','B-Action')],
-    2: [('deleted','B-Action')],
-    3: [('removed','B-Action')],
-    4: [('suspended','B-Action')],
-    5: [('temporarily','B-Action'),('suspended','L-Action')]
-}
+def represcribe():
+    represcribeActions = {
+        0: [('represcribe','B-Action')],
+        1: [('re-prescribe','B-Action')],
+        2: [('amend','B-Action')],
+        3: [('review','B-Action')],
+        4: [('alter', 'B-Action')],
+        5: [('change','B-Action')]
+
+    }
+    choice = random.randrange(0,len(represcribeActions),1)
+    return represcribeActions[choice]
+
+def represcribePastTense():
+    represcribeActions = {
+        0: [('represcribed','B-Action')],
+        1: [('re-prescribed','B-Action')],
+        2: [('amended','B-Action')],
+        3: [('reviewed','B-Action')],
+        4: [('altered', 'B-Action')],
+        5: [('changed','B-Action')]
+    }
+    choice = random.randrange(0,len(represcribeActions),1)
+    return represcribeActions[choice]
+
+def discontinue():
+    discontinueActions= {
+        0: [('discontinue','B-Action')],
+        1: [('stop','B-Action')],
+        2: [('delete','B-Action')],
+        3: [('remove','B-Action')],
+        4: [('suspend','B-Action')],
+        5: [('temporarily','B-Action'),('suspend','L-Action')]
+    }
+    choice = random.randrange(0,len(discontinueActions),1)
+    return discontinueActions[choice]
+
+def discontinued(): 
+    discontinueActionPastTense = {
+        0: [('discontinued','B-Action')],
+        1: [('stopped','B-Action')],
+        2: [('deleted','B-Action')],
+        3: [('removed','B-Action')],
+        4: [('suspended','B-Action')],
+        5: [('temporarily','B-Action'),('suspended','L-Action')]
+    }
+    choice = random.randrange(0,len(discontinueActionPastTense),1)
+    return discontinueActionPastTense[choice]
+
+
 startActions= {
     0: [('start','B-Action')],
     1: [('resume','B-Action')],
@@ -30,32 +57,63 @@ startActions= {
     3: [('add','B-Action'),('a','I-Action'),('prescription','I-Action'),('for','o')],
     4: [('generate','B-Action'),('an','I-Action'),('order','L-Action')],
 }
-startPastTense = {
-    0: [('started','B-Action')],
-    1: [('prescribed','B-Action')],
-    2: [('commenced','B-Action')]
-}
-
-reduction_actions = {
-        0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
-        1: [('ammend','B-Action'),('dose','L-Action')],
-        2: [('decrease','B-Action'),('dose','L-Action')],
-        3: [('reduce','B-Action'),('dose','L-Action')],
-        4: [('re-prescribe','B-Action')],
-        5: [('represcribe','B-Action')],
-        6: [('change','B-Action'),('dose','L-Action')],
-        7: [('review','B-Action'),('need','I-Action'),('to','I-Action'),('ammend','I-Action'),('the','I-Action'),('dose','L-Action')],
-        8: [('lower','B-Action'),('the','I-Action'),('dose','L-Action')],
-        9: [('decrease','B-Action'),('the','I-Action'),('dose','L-Action')]
+def started():
+    startPastTense = {
+        0: [('started','B-Action')],
+        1: [('prescribed','B-Action')],
+        2: [('commenced','B-Action')]
     }
+    choice = random.randrange(0,len(startPastTense),1)
+    return startPastTense[choice]
 
-increase_actions = {
-        0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
-        1: [('ammend','B-Action'),('dose','L-Action')],
-        2: [('increase','B-Action'),('dose','L-Action')],
-        3: [('re-prescribe','B-Action')],
-        4: [('represcribe','B-Action')],
-        5: [('change','B-Action'),('dose','L-Action')],
-        6: [('review','B-Action'),('need','I-Action'),('to','I-Action'),('ammend','I-Action'),('the','I-Action'),('dose','L-Action')],
-        7: [('increase','B-Action'),('the','I-Action'),('dose','L-Action')]
+def reduce_dose():
+    reduction_actions = {
+            0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
+            1: [('amend','B-Action'),('dose','L-Action')],
+            2: [('decrease','B-Action'),('dose','L-Action')],
+            3: [('reduce','B-Action'),('dose','L-Action')],
+            4: [('re-prescribe','B-Action')],
+            5: [('represcribe','B-Action')],
+            6: [('change','B-Action'),('dose','L-Action')],
+            7: [('review','B-Action'),('need','I-Action'),('to','I-Action'),('amend','I-Action'),('the','I-Action'),('dose','L-Action')],
+            8: [('lower','B-Action'),('the','I-Action'),('dose','L-Action')],
+            9: [('decrease','B-Action'),('the','I-Action'),('dose','L-Action')]
+        }
+    choice = random.randrange(0,len(reduction_actions),1)
+    return reduction_actions[choice]
+
+def increase_dose():
+    increase_actions = {
+            0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
+            1: [('amend','B-Action'),('dose','L-Action')],
+            2: [('increase','B-Action'),('dose','L-Action')],
+            3: [('re-prescribe','B-Action')],
+            4: [('represcribe','B-Action')],
+            5: [('change','B-Action'),('dose','L-Action')],
+            6: [('review','B-Action'),('need','I-Action'),('to','I-Action'),('amend','I-Action'),('the','I-Action'),('dose','L-Action')],
+            7: [('increase','B-Action'),('the','I-Action'),('dose','L-Action')]
+        }
+    choice = random.randrange(0,len(increase_actions),1)
+    return increase_actions[choice]
+
+def changeFrequency():
+    options = {
+        0: [('amend','B-Action'),('frequency','L-Action')],
+        1: [('change','B-Action'),('frequency','L-Action')],
+        2: [('amend','B-Action'),('adminstration','I-Action'),('times','L-Action')],
+        3: [('adjust','B-Action'),('frequency','L-Action')],
+        4: [('alter','B-Action'),('frequency','L-Action')]
     }
+    choice = random.randrange(0,len(options),1)
+    return options[choice]
+
+def amendRoute():
+    options = {
+        0: [('amend','B-Action'),('route','L-Action')],
+        1: [('change','B-Action'),('route','L-Action')],
+        2: [('adjust','B-Action'),('route','L-Action')],
+        3: [('alter','B-Action'),('route','L-Action')],
+        4: [('adjust','B-Action'),('route','L-Action')]
+    }
+    choice = random.randrange(0,len(options),1)
+    return options[choice]
