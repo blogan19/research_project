@@ -49,14 +49,17 @@ def discontinued():
     choice = random.randrange(0,len(discontinueActionPastTense),1)
     return discontinueActionPastTense[choice]
 
+def start():
+    startActions= {
+        0: [('start','B-Action')],
+        1: [('resume','B-Action')],
+        2: [('prescribe','B-Action')],
+        3: [('add','B-Action'),('a','I-Action'),('prescription','I-Action'),('for','o')],
+        4: [('generate','B-Action'),('an','I-Action'),('order','L-Action')],
+    }
+    choice = random.randrange(0,len(startActions),1)
+    return startActions[choice]
 
-startActions= {
-    0: [('start','B-Action')],
-    1: [('resume','B-Action')],
-    2: [('prescribe','B-Action')],
-    3: [('add','B-Action'),('a','I-Action'),('prescription','I-Action'),('for','o')],
-    4: [('generate','B-Action'),('an','I-Action'),('order','L-Action')],
-}
 def started():
     startPastTense = {
         0: [('started','B-Action')],
@@ -65,6 +68,20 @@ def started():
     }
     choice = random.randrange(0,len(startPastTense),1)
     return startPastTense[choice]
+
+def reduced():
+    reduction_actions = {
+            0: [('re-prescribed','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
+            1: [('amended','B-Action')],
+            2: [('decreased','B-Action')],
+            3: [('reduced','B-Action')],
+            4: [('re-prescribed')],
+            5: [('represcribed','B-Action')],
+            6: [('changed','B-Action')],
+            7: [('lowered','B-Action')]
+        }
+    choice = random.randrange(0,len(reduction_actions),1)
+    return reduction_actions[choice]
 
 def reduce_dose():
     reduction_actions = {
@@ -84,7 +101,7 @@ def reduce_dose():
 
 def increase_dose():
     increase_actions = {
-            0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
+            0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('higher','I-Action'),('dose','L-Action')],
             1: [('amend','B-Action'),('dose','L-Action')],
             2: [('increase','B-Action'),('dose','L-Action')],
             3: [('re-prescribe','B-Action')],
@@ -95,6 +112,17 @@ def increase_dose():
         }
     choice = random.randrange(0,len(increase_actions),1)
     return increase_actions[choice]
+def increased():
+    reduction_actions = {
+            0: [('re-prescribed','B-Action'),('at','I-Action'),('a','I-Action'),('lower','I-Action'),('dose','L-Action')],
+            1: [('amended','B-Action')],
+            2: [('increased','B-Action')],
+            3: [('re-prescribed')],
+            4: [('represcribed','B-Action')],
+            5: [('changed','B-Action')],
+        }
+    choice = random.randrange(0,len(reduction_actions),1)
+    return reduction_actions[choice]
 
 def changeFrequency():
     options = {
@@ -114,6 +142,26 @@ def amendRoute():
         2: [('adjust','B-Action'),('route','L-Action')],
         3: [('alter','B-Action'),('route','L-Action')],
         4: [('adjust','B-Action'),('route','L-Action')]
+    }
+    choice = random.randrange(0,len(options),1)
+    return options[choice]
+
+def biochemMonitoring():
+    options = {
+        0: [('send','B-Action'),('level','L-Action')],
+        1: [('take','B-Action'),('bloods','L-Action')],
+        2: [('send','B-Action'),('bloods','L-Action')],
+        3: [('monitor','B-Action'),('levels','I-Action'),('accordingly','L-Action')]
+    }
+    choice = random.randrange(0,len(options),1)
+    return options[choice]
+
+def reviewDate():
+    options = {
+        0: [('add','B-Action'),('stop','I-Action'),('date','L-Action')],
+        1: [('add','B-Action'),('course','I-Action'),('length','L-Action')],
+        2: [('add','B-Action'),('review','I-Action'),('date','L-Action')],
+        3: [('specify','B-Action'),('course','I-Action'),('length','L-Action')]
     }
     choice = random.randrange(0,len(options),1)
     return options[choice]

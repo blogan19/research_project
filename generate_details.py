@@ -37,6 +37,12 @@ def Relative():
     relative = relatives[choice]
     return relative
 
+def randomWard():
+    wardDigit = random.choice(['1','2','3','4','5'])
+    wardAlpha = random.choice(['A','B','C','D','E'])
+    ward = [('ward','o'),(wardDigit+wardAlpha,'o')]
+    return ward
+
 def Pharmacist():
     name = [(names.get_first_name(),'o')]
     full = names.get_full_name().split(" ")
@@ -67,9 +73,7 @@ def Pharmacist():
     }
     phone =  phoneType[random.randrange(0,len(phoneType),1)]
     #random ward 
-    wardDigit = random.choice(['1','2','3','4','5'])
-    wardAlpha = random.choice(['A','B','C','D','E'])
-    ward = [('ward','o'),(wardDigit+wardAlpha,'o')]
+    ward = randomWard()
         
     options = {
         0: phone,

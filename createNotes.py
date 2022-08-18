@@ -1,9 +1,11 @@
+from dis import disco
 from distutils.util import change_root
+from re import M
 import pandas as pd
 import random
 from generate_drugs import randomAny,randomOral, randomInhaled, randomInject, medicationList
-from generate_details import HCP,Pharmacist, Patient, randDay, randomDate,randTimePeriod,please, Relative, pharmacokineticChange, randomGuidance, randomDrugClass,ivostReasons,contraindicationType, sideEffects, pharmokineticIssue, planAuthor,allergyReaction, medRecSource,administrationTimes,randomFrequency, randomRoute,randomIndication,randomBiochem
-from actions import discontinue,represcribe,represcribePastTense,startActions, discontinued, started,changeFrequency, increase_dose, reduce_dose,amendRoute
+from generate_details import HCP,randomWard,Pharmacist, Patient, randDay, randomDate,randTimePeriod,please, Relative, pharmacokineticChange, randomGuidance, randomDrugClass,ivostReasons,contraindicationType, sideEffects, pharmokineticIssue, planAuthor,allergyReaction, medRecSource,administrationTimes,randomFrequency, randomRoute,randomIndication,randomBiochem
+from actions import discontinue,represcribe,represcribePastTense,start, discontinued, started,changeFrequency, increase_dose, reduce_dose,amendRoute,biochemMonitoring,reviewDate, reduced, increased
 reductions = pd.read_csv("oral_cleaned.csv")
 
 
@@ -31,27 +33,28 @@ def reduceDoses(drug1, drug2):
     biochem = randomBiochem()
 
     reductions = {
-        0: drug['drugName'] + ["needs to be"] + [("reduced","o")] +["to"] + drug['dose'] + reduce_dose(),
+        0: drug['drugName'] + ["needs to be"] + [("reduced","B-Action")] +["to"] + drug['dose'] + reduce_dose(),
         1: ["Patient normally takes"] + drug['dose'] + ["of"] +  drug['drugName'] + ["please"] + reduce_dose(),
         2: ["Patient is prescribed"] +  drug['drugName'] + ["at a dose of"] + drug['dose'] + ["please review need to"] + reduce_dose(),
         3: ["Patient is prescribed"] +  drug['drugName'] + ["at a dose of"] + drug['dose'] + ["Review need to"] + reduce_dose() + ["to"] + drug['newdose'],
         4: drug['drugName'] + ["is prescribed at a dose of"] + drug['dose'] + ["is this meant to be"] + drug['newdose'] + reduce_dose(),
-        5: drug["dose"] + ["is a dose which is higher than the patients usual dose"] + drug['newdose'] + ["review need to reduce dose thanks"],
+        5: drug["dose"] + ["is a dose which is higher than the patients usual dose"] + drug['newdose'] + ["review need to"] + reduce_dose(),
         6: ["Patient is prescribed"] +  drug['drugName'] + ["at a dose of"] + drug['dose'] + ["Review need to"] + reduce_dose() + ["as this has likely been prescribed in error"],
-        7: ["patient was advised to reduce the dose of"] + drug["drugName"] + ["to"] + drug["newdose"] + ["by"] + HCP() + ["in the clinic last"] + randDay("any"),
+        7: ["patient was advised to"] [("reduce","B-Action"),("the","I-Action"),("dose","L-Action")] + ["of"] + drug["drugName"] + ["to"] + drug["newdose"] + ["by"] + HCP() + ["in the clinic last"] + randDay("any"),
         8: Patient('gendered')+ ["has been taking"] + drug["drugName"] + ["at a dose of"] + drug["newdose"] + ["for the past"] + randTimePeriod('any') +  please() + reduce_dose(),
-        9: ["Patient states dose was reduced but cannot remember who told them to do so"] + drug["drugName"] + ["therefore needs reviewing and potentially reducing to"] + drug['newdose'],
-        10:["The"] + Relative() + ["of"] +  Patient("gendered") + ["states that they were recently seen in clinic and the dose of"] + drug['drugName'] + ["was reduced from"] + drug["dose"] + ["to"] + drug["newdose"],
+        9: ["Patient states dose was"] + [("reduced"),("B-Action")] ["but cannot remember who told them to do so"] + drug1["drugName"] + ["therefore needs reviewing and potentially"] [("reducing","B-Action")] + ["to"] + drug1['newdose'],
+        10:["The"] + Relative() + ["of"] +  Patient("gendered") + ["states that they were recently seen in clinic and the dose of"] + drug1['drugName'] + ["was"] + [("reduced","B-Action")]  + ["from"] + drug1["dose"] + ["to"] + drug1["newdose"],
         11: drug["drugName"] + ["was reduced from"] + drug["dose"] + ["to"] + drug["newdose"] + ["due to an interaction with"] +secondDrug["drugName"] + reduce_dose(),
         12: drug["drugName"] + ["increases the plasma concentration of"] + secondDrug["drugName"] + ["when co-administered. A dose of"] +drug["dose"] +["is therefore too high"] + reduce_dose(),
         13: drug["drugName"] + ["increases the plasma concentration of"] + secondDrug["drugName"] + ["when co-administered. It is currentely prescribed as"] +drug["dose"] +["can this be"] + [("reduced",'B-Action')] + ["to"] + drug["newdose"],
         14: ["The levels of"] + drug["drugName"] + ["are increased by"] + secondDrug["drugName"] + reduce_dose(),
-        15: pharmacokineticChange()  + ["review dose of"] + drug["drugName"] + ["this may need"] +[("reducing","o")]+ ["from"]+drug["dose"]+ ["to"] + drug["newdose"],
-        16: pharmacokineticChange()  + ["please review"] + drug["drugName"] + ["this may need"] + ["(reducing","o"] + ["to"] + drug["newdose"],
+        15: pharmacokineticChange()  + ["review dose of"] + drug["drugName"] + ["this may need"] +[("reducing","B-Action")]+ ["from"]+drug["dose"]+ ["to"] + drug["newdose"],
+        16: pharmacokineticChange()  + ["please review"] + drug["drugName"] + ["this may need"] + [("reducing","B-Action")] + ["to"] + drug["newdose"],
         17: ["patient has a renal function of"] + [(f"{random.randrange(10,90,1)}ml/min","o")] + ["and is prescribed"] + drug["drugName"] + ["as per"] + randomGuidance() + random.choice([["this should be"],["this needs to be"],["can this be"],["should this be"]]) + [("reduced","o")] + ["to"] + drug["newdose"],
-        18: drug['drugName'] + ["needs to be"] + [("reduced","o")] +["to"] + drug['dose']+ [f'{random.choice([["due to serious drug drug interaction"],["as it interacts with feed"],["is incompatible with feeding regime"]])}']+ reduce_dose(),
+        18: drug['drugName'] + ["needs to be"] + [("reduced","B-Action")] +["to"] + drug['dose']+ [f'{random.choice([["due to serious drug drug interaction"],["as it interacts with feed"],["is incompatible with feeding regime"]])}']+ reduce_dose(),
         19: drug['drugName'] + ["interacts with the following medications:"] + medicationList(random.randint(2,8)) + reduce_dose() + ["of"]+ drug['drugName'],
-        20: ['Patient has a low'] + [biochem['test']]  + drug1['drugName'] + random.choice([['is know to cause this'],[f'is known to reduced{biochem["test"]}'],['can often be the cause']]) + reduce_dose() + ['to'] + drug1['newdose']
+        20: ['Patient has a low'] + [biochem['test']]  + drug1['drugName'] + random.choice([['is know to cause this'],[f'is known to reduce {biochem["test"]}'],['can often be the cause']]) + reduce_dose() + ['to'] + drug1['newdose'],
+        21: drug1['drugName'] + ['needs to be'] + reduced() + ['it has been prescribed for'] + randTimePeriod('any') + ['the dose should therefore be reduced to'] + drug1['dose']
     }
     #pick a random sentence from dict
     sentence_pick = random.randrange(0,len(reductions),1)
@@ -60,15 +63,43 @@ def reduceDoses(drug1, drug2):
     
 
 
-def increaseDose():
-    pass
+def increaseDose(drug1,drug2):
+    biochem = randomBiochem()
+    sentences = {
+        0: pharmacokineticChange() + ['please review need to'] + increase_dose() + ['of'] + drug1['drugName'] + ['to'] + drug1['dose'],
+        1: ['Patients renal function has improved significantly since'] + randDay('any') + ['please review need to'] + random.choice([[discontinue()],[start()],[f'{changeFrequency()} of']]) + drug1['drugName'],
+        2: drug1['drugName'] + ['needs to be'] + increased() + ['it has been prescribed for'] + randTimePeriod('any') + ['the dose should therefore be reduced to'] + drug1['dose'],
+        3: drug1['drugName'] + ["needs to be"] + [("increased","B-Action")] +["to"] + drug1['dose'] + increase_dose(),
+        4: random.choice([["Patient is prescribed"],["Patient normally takes"]]) +  drug1['drugName'] + ["at a dose of"] + drug1['dose'] + random.choice([["please review need to"],['review need to'],['please']]) + increase_dose(),
+        5: drug1['drugName'] + ["is prescribed at a dose of"] + drug1['dose'] + ["is this meant to be"] + drug1['newdose'] + reduce_dose(),
+        6: drug1["dose"] + ["is a dose which is lower than the patients usual dose"] + drug1['newdose'] + ["review need to"] + increase_dose(),
+        7: ["Patient is prescribed"] +  drug1['drugName'] + ["at a dose of"] + drug1['dose'] + ["Review need to"] + reduce_dose() + ["as this has likely been prescribed in error"],
+        8: ["patient was advised to"] + [("increase","B-Action"),("the","I-Action"),("dose","L-Action")] + ["of"] + drug1["drugName"] + ["to"] + drug1["newdose"] + ["by"] + HCP() + ["in the clinic last"] + randDay("any"),
+        9: Patient('gendered')+ ["has been taking"] + drug1["drugName"] + ["at a dose of"] + drug1["newdose"] + ["for the past"] + randTimePeriod('any') +  please() + increase_dose(),
+        10: ["Patient states dose was"] + [("increased"),("B-Action")] ["but cannot remember who told them to do so"] + drug1["drugName"] + ["therefore needs reviewing and potentially"] [("increasing","B-Action")] + ["to"] + drug1['newdose'],
+        11:["The"] + Relative() + ["of"] +  Patient("gendered") + ["states that they were recently seen in clinic and the dose of"] + drug1['drugName'] + ["was"] + [("increased","B-Action")]  + ["from"] + drug1["dose"] + ["to"] + drug1["newdose"],
+        12: drug1["drugName"] + ["was reduced from"] + drug1["dose"] + ["to"] + drug1["newdose"] + ["due to an interaction with"] +drug2["drugName"] + increase_dose(),
+
+        12: drug1["drugName"] + ["reduces the plasma concentration of"] + drug2["drugName"] + ["when co-administered. A dose of"] +drug1["dose"] +["is therefore too low"] + increase_dose(),
+        13: drug1["drugName"] + ["reduces the plasma concentration of"] + drug2["drugName"] + ["when co-administered. It is currentely prescribed as"] +drug1["dose"] +["can this be"] + [("increased",'B-Action')] + ["to"] + drug1["newdose"],
+        14: ["The levels of"] + drug1["drugName"] + ["are reduced by"] + drug2["drugName"] + increase_dose(),
+        15: pharmacokineticChange()  + ["review dose of"] + drug1["drugName"] + ["this may need"] +[("reducing","B-Action")]+ ["from"]+drug1["dose"]+ ["to"] + drug1["newdose"],
+        16: pharmacokineticChange()  + ["please review"] + drug1["drugName"] + ["this may need"] + [("reducing","B-Action")] + ["to"] + drug1["newdose"],
+        17: ["patient has a renal function of"] + [(f"{random.randrange(10,90,1)}ml/min","o")] + ["and is prescribed"] + drug1["drugName"] + ["as per"] + randomGuidance() + random.choice([["this should be"],["this needs to be"],["can this be"],["should this be"]]) + [("reduced","o")] + ["to"] + drug1["newdose"],
+        18: drug1['drugName'] + ["needs to be"] + [("increased","B-Action")] +["to"] + drug1['dose']+ [f'{random.choice([["due to serious drug drug interaction"],["as it interacts with feed"],["is incompatible with feeding regime"]])}']+ increase_dose(),
+        19: drug1['drugName'] + ["interacts with the following medications:"] + medicationList(random.randint(2,8)) + reduce_dose() + ["of"]+ drug1['drugName'],
+        20: ['Patient has a low'] + [biochem['test']]  + drug1['drugName'] + random.choice([['is know to cause this'],[f'is known to increase {biochem["test"]}'],['can often be the cause']]) + increase_dose() + ['to'] + drug1['newdose'],
+        21: drug1['drugName'] + ['needs to be'] + increased() + ['it has been prescribed for'] + randTimePeriod('any') + ['the dose should therefore be reduced to'] + drug1['dose']
+    }
+    choice = random.randrange(0, len(sentences),1)
+    return tagsentences(sentences[choice])
 
 
 def IncorrectMedications(drug1, drug2):
     actionChoice = represcribe()
 
     discontinue = discontinue()
-    start = startActions[random.randrange(0,len(startActions),1)]
+    start = start()
     sentences = {
         0: drug1['drugName'] + ['has been prescribed instead of'] + drug2['drugName'] + please() + ['review this prescription and'] + [('discontinue','B-Action')] + drug1['drugName'] + random.choice([[' and prescribe correct medication'],[f'and prescribe {drug2["drugName"]}']]),
         1: ['Has'] + drug1['drugName'] + ['been prescribed intentionally. Should the prescription read'] + drug2['drugName'] + ['please'] + actionChoice + ['prescription'],
@@ -91,17 +122,16 @@ def duplicatedTherapy(drug1, drug2):
     # drug y is also a calcium channel blocker
     # Drug x and Drug y have the same mechanism of action 
     # Drug x and y work in the same way 
-    discontinue = discontinue()
-    discontinuePastTense = discontinued()
+
 
     injection = randomInject('')
     sentences = {
-        0: injection['drugName'] + ['has been prescribed intravenously at'] + injection['dose'] +['and also oraly at a dose of'] + injection['newdose'] + random.choice([['Should this therapy have been duplicated like this'],['is this correct'],['this is most likley unintentional'],['this appears to have been done in error']]) + please() + discontinue + ['one of the prescriptions'] + random.choice([['can IV be stopped'],['is IV indicated?'],['oral option is sufficient']]) + ivostReasons(),
-        1: drug1['drugName'] + ['has been prescribed twice'] + please() + discontinue + ['one of the prescriptions'],
-        2: Patient('') + ['has two active prescriptions for'] + drug1['drugName'] + random.choice([['There is an increased risk of overdose'],['patient is at risk of overdise']]) + ['can one ot the prescriptions be'] + discontinuePastTense,
-        3: drug1['drugName'] + ['and'] + drug2['drugName'] + ['are in the same medication class'] + random.choice([['no advantage is gained by prescribing both'],['increasing risk of overdose']]) + ['can one of the drugs be'] + discontinuePastTense + please(),
-        4: ['Both'] + drug1['drugName'] + ['and'] + drug2['drugName'] + ['are'] + randomDrugClass() + ['is this intentional normally the two wouldnt be prescribed together one of the medications may need to be']  + discontinueActionPastTense + ['please review as a matter of urgency thanks'],
-        5: random.choice([['both'],['two of the medications prescribed for this patient'],['the two medications'],['the two drugs']]) + drug1['drugName'] + ['and'] + drug2['drugName'] + random.choice([['have the same mechanism of action'],['have a very similar mechanism of action'],['work in exactly the same way'],['have an identical mechanism of action']]) + ['review the need to'] + discontinue + drug1['drugName']
+        0: injection['drugName'] + ['has been prescribed intravenously at'] + injection['dose'] +['and also oraly at a dose of'] + injection['newdose'] + random.choice([['Should this therapy have been duplicated like this'],['is this correct'],['this is most likley unintentional'],['this appears to have been done in error']]) + please() + discontinue() + ['one of the prescriptions'] + random.choice([['can IV be stopped'],['is IV indicated?'],['oral option is sufficient']]) + ivostReasons(),
+        1: drug1['drugName'] + ['has been prescribed twice'] + please() + discontinue() + ['one of the prescriptions'],
+        2: Patient('') + ['has two active prescriptions for'] + drug1['drugName'] + random.choice([['There is an increased risk of overdose'],['patient is at risk of overdise']]) + ['can one ot the prescriptions be'] + discontinued(),
+        3: drug1['drugName'] + ['and'] + drug2['drugName'] + ['are in the same medication class'] + random.choice([['no advantage is gained by prescribing both'],['increasing risk of overdose']]) + ['can one of the drugs be'] + discontinued() + please(),
+        4: ['Both'] + drug1['drugName'] + ['and'] + drug2['drugName'] + ['are'] + randomDrugClass() + ['is this intentional normally the two wouldnt be prescribed together one of the medications may need to be']  + discontinued() + ['please review as a matter of urgency thanks'],
+        5: random.choice([['both'],['two of the medications prescribed for this patient'],['the two medications'],['the two drugs']]) + drug1['drugName'] + ['and'] + drug2['drugName'] + random.choice([['have the same mechanism of action'],['have a very similar mechanism of action'],['work in exactly the same way'],['have an identical mechanism of action']]) + ['review the need to'] + discontinue() + drug1['drugName']
     }
     choice = random.randrange(0,len(sentences),1)
     return tagsentences(sentences[choice])
@@ -115,19 +145,17 @@ def contraindications(drug1,drug2):
     # x condition means that drug y is not advised 
     # X guidance advises that drug y should not be used in patients with 
     # Mr Smith has unstable angina. Drug y has been newly started. This goes against hospital policy as it is a knwon caution/CI
-    discontinue = discontinue()
     discontinuePastTense = discontinued()
-    start = startActions[random.randrange(0,len(startActions),1)]
     startPast  = started()
     sentences = {
-        0: ["use of"] + drug1['drugName'] + ['is contraindicated in this patient please review this prescription and'] + discontinue + drug1['drugName'],
-        1: drug1['drugName'] + random.choice([['increases the risk of'],['may increase the risk of'],['can cause']]) + sideEffects() + please() + ['review need to'] + discontinue + drug1['drugName'] + ['and start'] + drug2['drugName']+ ['instead'],
-        2: drug1['drugName'] + random.choice([['increases the risk of'],['may increase the risk of'],['can cause'],['can increase the risk of'],['significantly increases risk of']]) + sideEffects() + ['particularly in patients with'] + pharmokineticIssue() + ["review this prescription and"] + discontinue + ['is appropriate'],
+        0: ["use of"] + drug1['drugName'] + ['is contraindicated in this patient please review this prescription and'] + discontinue() + drug1['drugName'],
+        1: drug1['drugName'] + random.choice([['increases the risk of'],['may increase the risk of'],['can cause']]) + sideEffects() + please() + ['review need to'] + discontinue() + drug1['drugName'] + ['and start'] + drug2['drugName']+ ['instead'],
+        2: drug1['drugName'] + random.choice([['increases the risk of'],['may increase the risk of'],['can cause'],['can increase the risk of'],['significantly increases risk of']]) + sideEffects() + ['particularly in patients with'] + pharmokineticIssue() + ["review this prescription and"] + discontinue() + ['is appropriate'],
         3: ['The medications'] + medicationList(3) + ['are all'] + random.choice([['cautioned'],['contraindicated'],['inappropriate']]) + ['in patients with'] + contraindicationType() + ['and may need to be'] + discontinuePastTense,
         4: drug1['drugName'] + ['is not recomended in'] + contraindicationType() + ['can an alternative be'] + startPast,
-        5: randomGuidance() + random.choice([['states'],['dictates'],['recommends'],['advises'],['stipulates']])+ ['that'] + drug1['drugName'] + random.choice([['is not the first line choice'],['should be avoided'],['should not be used']]) + ['in patients with'] + contraindicationType() + please() + ['review need to'] + discontinue + drug1['drugName'] + ['and'] + start + drug2['drugName'],
-        6: randomGuidance() + random.choice([['states'],['dictates'],['recommends'],['advises'],['stipulates']])+ ['that'] + drug1['drugName'] + random.choice([['is not the first line choice'],['should be avoided'],['should not be used']]) + ['in patients with'] + contraindicationType() + please() + discontinue + drug1['drugName'],
-        7: sideEffects() + ['prevents the use of'] + drug1['drugName'] + discontinue + drug1['drugName'],
+        5: randomGuidance() + random.choice([['states'],['dictates'],['recommends'],['advises'],['stipulates']])+ ['that'] + drug1['drugName'] + random.choice([['is not the first line choice'],['should be avoided'],['should not be used']]) + ['in patients with'] + contraindicationType() + please() + ['review need to'] + discontinue() + drug1['drugName'] + ['and'] + start() + drug2['drugName'],
+        6: randomGuidance() + random.choice([['states'],['dictates'],['recommends'],['advises'],['stipulates']])+ ['that'] + drug1['drugName'] + random.choice([['is not the first line choice'],['should be avoided'],['should not be used']]) + ['in patients with'] + contraindicationType() + please() + discontinue() + drug1['drugName'],
+        7: sideEffects() + ['prevents the use of'] + drug1['drugName'] + discontinue() + drug1['drugName'],
         8: Patient('') + ['has'] + contraindicationType() + ['and'] + drug1['drugName'] + ['has been newly started'] + ['this goes against advice from'] + randomGuidance() + ['as it is a known contraindication and is significant'] + [('review','B-Action'),('prescription','L-Action')]
     
     }
@@ -142,16 +170,14 @@ def incorrectDoseIncrease(drug1,drug2):
     # the plan was to increase the dose of y however the dose for x has been increasedT
     # The dose has been increased above the recomended dose for a patient with a renal function of
     # has been increase however the hr ha snot dropped
-    # has ben increase but pt now experienceing side effects
-    start = startActions[random.randrange(0,len(startActions),1)]
-    
+    # has ben increase but pt now experienceing side effects    
     sentences = {
         0: ["the dose of"] + drug1["drugName"] + ["has been increased from"] + drug1['dose'] + ['to'] + drug1['newdose'] + random.choice([['was this an intentional increased'],['has this been done intentionally'],['however there is no documentation in the notes'],['this is not documented in the medical plan']]) + random.choice([['can this be reviewed'],['please review prescription'],['please review']]) + ['and'] + reduce_dose() + random.choice([['if this change was unintentional'],['if appropriate'],['if change was made in error']]),
         1: ["the dose of"] + drug1["drugName"] + ["has been increased from"] + drug1['dose'] + ['to'] + drug1['newdose'] + ['however the plan in the medical notes was to increase the dose from next'] + randDay('any'),
         2: drug1['drugName'] + random.choice([['was prescribed at a dose of'],['has been issued at'],['has been prescribed as']]) + drug1['newdose'] + ['since admission The patient normally only takes'] + drug1['dose'] + ['and this was the dose they were admitted on was this change intentional review need to'] + reduce_dose(),
         3: ['patient normally takes'] + drug1['drugName'] + drug1['dose'] + ['prescribed as'] + drug1['newdose'] + ['review need to'] + reduce_dose(),
         4: ['the increased dose of'] + drug1['newdose'] + ['for']  + drug1['dose'] + ['is now above the max dose as per'] + randomGuidance() + ['review need to'] + reduce_dose(),
-        5: drug1['drugName'] + ['has been increased to'] + drug1['newdose'] + ['however the maximum recommended dose for'] + drug1['drugName'] + ['is'] + drug1['dose'] + ['please'] + reduce_dose() + ['or'] + start + ['an alternative'] + randomDrugClass() + ['such as'] + drug2['drugName'] + drug2['dose'],
+        5: drug1['drugName'] + ['has been increased to'] + drug1['newdose'] + ['however the maximum recommended dose for'] + drug1['drugName'] + ['is'] + drug1['dose'] + ['please'] + reduce_dose() + ['or'] + start() + ['an alternative'] + randomDrugClass() + ['such as'] + drug2['drugName'] + drug2['dose'],
         6: ['The plan as per the'] + planAuthor() + ['was to increase the dose'] + drug1['dose'] + ['from'] + drug1['dose'] + ['to'] + drug1['newdose'] + random.choice([['this hasnt been done as of yet'],['this has not been actioned']])+ please() + [("increase","B-Action"),('dose','L-Action')],
         7: ['The plan as per the'] + planAuthor() + ['was to increase the dose of'] + drug1['drugName'] + ['from'] + drug1['dose'] + ['to'] + drug1['newdose'] + random.choice([['this hasnt been done as of yet'],['this has not been actioned however the dose of']])+ drug2['drugName'] + ['has been increased from'] + drug2['dose'] + ['to'] + drug2['newdose'] +['has the wrong drug been increased'] + please() + ['review need to'] + reduce_dose() + ['of'] +drug2['drugName'] + ['and'] + increase_dose() + drug1['drugName'] + ['from'] + drug1['dose'] + ['to'] + drug2['newdose']
     }
@@ -166,20 +192,19 @@ def knownAllergy(drug1, drug2):
     # Risk of cross reaction with allergy 
     # Patient has not tolerated this in the past
     # Patient recently had a reaction to this but it could have been that
-    discontinue = discontinue()
-    start = startActions[random.randrange(0,len(startActions),1)]
+
     sentences = {
-        0: Patient('gendered') + ['has a known allergy to'] + drug1['drugName'] + ['however it has been prescribed this admission'] + please() + ['review need to'] + discontinue,
-        1: ['Patient has a known allergy to'] +  drug1['drugName'] + ['having had a reaction of'] + allergyReaction() + please() + ['review need to'] + discontinue,
-        2: ['Patient has previously had an allergic reaction to'] +  drug1['drugName'] + ['review need to'] + start + drug2['drugName'] + ['as an alternative'],
-        3: ['The allergy history for this patient has not been updated since'] + [randomDate()] + ['the'] + medRecSource() + ['states that the patient recently had an allergic reaction to'] + drug1['drugName'] + ['please weigh up risk vs benefit and review neeed to'] + discontinue + drug1['drugName'] + drug2['drugName'] + ['may provide a suitable alternative'],
-        4: discontinue + drug1['drugName'] + ['and'] + drug2['drugName'] + ['according to'] + random.choice([Relative(),medRecSource()]) +  ['patient has had a bad reaction to these in the past if alternative is required if an altenartive is required one of the following can be presrcribed'] + medicationList(3),
-        5: [f'There is a {random.randint(1,10)}% risk of allergy cross-reaction with'] + drug2['drugName'] + ['when patient has a known allergy to'] + drug1['drugName'] + please() + start + ['an alternative'],
-        6: Patient('gendered') + random.choice([['has previously not tolerated'],['had previous bad reactions to'],['states they had a funny turn with'],['cannot tolerate'],['states they do not want to take'],['would rather avoid taking'],[f'has suffered from {allergyReaction()} whilst taking']]) + drug1['drugName'] + ['please'] +  {discontinue} + ['and'] +{start} + ['alternative'],
-        7: ['A medication'] + Patient('gendered') + ['was recently started on caused them to suffer from'] + allergyReaction() + ['this could have been either'] + drug2['drugName'] + ['or'] + drug1['drugName'] + ['review need to'] + discontinue + ['these medications'] + ['or'] + start + ['an alternative'],
-        8: ['Patient recently cannot remember their allergy status but thinks that they be allergic to'] + drug1['drugName'] + ['review need to'] + discontinue,
-        9: ['Patient cant remember what type of reaction they have with'] + drug1['drugName'] + ['review need to']  + discontinue,
-        10: drug1['drugName'] + ['may cause'] + allergyReaction() + ['review need to'] + start + ['alternative'] + ['such as'] + drug2['drugName']
+        0: Patient('gendered') + ['has a known allergy to'] + drug1['drugName'] + ['however it has been prescribed this admission'] + please() + ['review need to'] + discontinue(),
+        1: ['Patient has a known allergy to'] +  drug1['drugName'] + ['having had a reaction of'] + allergyReaction() + please() + ['review need to'] + discontinue(),
+        2: ['Patient has previously had an allergic reaction to'] +  drug1['drugName'] + ['review need to'] + start() + drug2['drugName'] + ['as an alternative'],
+        3: ['The allergy history for this patient has not been updated since'] + [randomDate()] + ['the'] + medRecSource() + ['states that the patient recently had an allergic reaction to'] + drug1['drugName'] + ['please weigh up risk vs benefit and review neeed to'] + discontinue() + drug1['drugName'] + drug2['drugName'] + ['may provide a suitable alternative'],
+        4: discontinue() + drug1['drugName'] + ['and'] + drug2['drugName'] + ['according to'] + random.choice([Relative(),medRecSource()]) +  ['patient has had a bad reaction to these in the past if alternative is required if an altenartive is required one of the following can be presrcribed'] + medicationList(3),
+        5: [f'There is a {random.randint(1,10)}% risk of allergy cross-reaction with'] + drug2['drugName'] + ['when patient has a known allergy to'] + drug1['drugName'] + please() + start() + ['an alternative'],
+        6: Patient('gendered') + random.choice([['has previously not tolerated'],['had previous bad reactions to'],['states they had a funny turn with'],['cannot tolerate'],['states they do not want to take'],['would rather avoid taking'],[f'has suffered from {allergyReaction()} whilst taking']]) + drug1['drugName'] + ['please'] +  discontinue() + ['and'] +start() + ['alternative'],
+        7: ['A medication'] + Patient('gendered') + ['was recently started on caused them to suffer from'] + allergyReaction() + ['this could have been either'] + drug2['drugName'] + ['or'] + drug1['drugName'] + ['review need to'] + discontinue() + ['these medications'] + ['or'] + start() + ['an alternative'],
+        8: ['Patient recently cannot remember their allergy status but thinks that they be allergic to'] + drug1['drugName'] + ['review need to'] + discontinue(),
+        9: ['Patient cant remember what type of reaction they have with'] + drug1['drugName'] + ['review need to']  + discontinue(),
+        10: drug1['drugName'] + ['may cause'] + allergyReaction() + ['review need to'] + start() + ['alternative'] + ['such as'] + drug2['drugName']
     }
     choice = random.randrange(0,len(sentences),1)
     return tagsentences(sentences[choice])
@@ -191,7 +216,7 @@ def adminTime(drug1,drug2):
         2: ['administration of'] + drug1['drugName'] + [f'should be at least {random.randint(1,5)} hours after and {random.randint(1,5)} before administration of'] + drug2['drugName'] + please() + changeFrequency() + ['of either'] + drug1['drugName'] + ['or'] + drug2['drugName'],
         3: drug2['drugName'] + random.choice([['should not be co-administered'],['cannot be given at the same time as'],['should not be administered with'],['administration should not be at the same time as']]) + drug1['drugName'] + changeFrequency(),
         4: Patient('gendered') + ['is prescribed'] + drug1['drugName'] + ['it is currently prescribed'] + administrationTimes() + ['it may be more appropriate to prescribe this']  + administrationTimes() + please() + changeFrequency()  + ['of'] + drug1['drugName'],
-        5: ['Review need to'] + changeFrequency() + ['of'] + medicationList() + random.choice([['the enteral feed is likely to reduce their absorption'],['the efficacy of these medications will be reduced by the enteral feed'],['co-administration with the enteral feed will reduce absorbtion']]),
+        5: ['Review need to'] + changeFrequency() + ['of'] + medicationList(3) + random.choice([['the enteral feed is likely to reduce their absorption'],['the efficacy of these medications will be reduced by the enteral feed'],['co-administration with the enteral feed will reduce absorbtion']]),
         6: ['Timing of the next dose of'] + drug1['drugName'] + [f'needs to be changed to allow for a {random.randint(1,3)} hour medication free period. review the need to'] + changeFrequency()
     }
     choice = random.randrange(0,len(sentences),1)
@@ -247,13 +272,85 @@ def inadequateMonitoring(drug1,drug2):
     #drug c requires monitoring of randomLevel
     biochem = randomBiochem()
     sentences =  {
-        0: ['Regular monitoring of']  + [biochem['test']] + ['is recommended with'] + drug1['drugName'] + random.choice([['can a level be organised for next'],['can a level be arranged for next'],['can a level be sent for next']]) + randDay('any')
+        0: ['Regular monitoring of']  + [biochem['test']] + ['is recommended with'] + drug1['drugName'] + random.choice([['can a level be organised for next'],['can a level be arranged for next'],['can a level be sent for next']]) + randDay('any'),
+        1: ['Patient has been taking']  + drug1['drugName'] + ['for the past'] + randTimePeriod('any') + random.choice([['this drug requires regular monitoring of'],['this requires monitoring of'],['review need to send a level for']]) + [biochem['test']] + please() + ['review need to'] + biochemMonitoring(),
+        2: [biochem['test']] + random.choice([['has not been measured'],['has not been taken'],['is not being monitored routinely']]) + drug1['drugName'] + ['and'] + drug2['drugName'] + ['require close monitoring. please'] +biochemMonitoring(),
+        3: ['Please'] + biochemMonitoring() + ['patient is on several medications which need monitoring including']  + medicationList(4),
+        4: drug1['drugName'] + ['and'] + drug2['drugName'] + ['require daily levels of'] +[biochem['test']] + ['ensure that the plan is to'] + biochemMonitoring() + ['and if high'] + reduce_dose() + random.choice([['accordingly'],['as approrpiate'],['as recomended']])
     }
 
     choice = random.randrange(0,len(sentences),1)
     return tagsentences(sentences[choice])
 
-def create():
+def prescriptionDuration(drug1,drug2):
+    sentences = {
+        0: drug1['drugName'] + ['has been prescribed for'] +randTimePeriod('any') + random.choice([['courses of this drug are usually limited'],['this drug should be prescribed for the shortest time possible'],['this is longer than the normal course lenght'],['should this have already finished'],['patient has now had a prolonged course'],['course length does not usually exceed a couple of days'],['this is longer than normal']])+ ['please review need to'] + discontinue(),
+        1: drug1['drugName'] + ['has been prescribed since last'] + randDay('any') + random.choice([['courses of this drug are usually limited'],['this drug should be prescribed for the shortest time possible'],['this is longer than the normal course lenght'],['should this have already finished'],['patient has now had a prolonged course'],['course length does not usually exceed a couple of days'],['this is longer than normal']])+['please review need to'] + discontinue(),
+        2: drug1['drugName'] + ['has been prescribed since'] + [randomDate()]+ random.choice([['courses of this drug are usually limited'],['this drug should be prescribed for the shortest time possible'],['this is longer than the normal course lenght'],['should this have already finished'],['patient has now had a prolonged course'],['course length does not usually exceed a couple of days'],['this is longer than normal']])+ ['please review need to'] + discontinue(),
+        3: drug1['drugName'] + ['has been prescribed for'] +randTimePeriod('any')+ random.choice([['courses of this drug are usually limited'],['this drug should be prescribed for the shortest time possible'],['this is longer than the normal course length'],['should this have already finished'],['patient has now had a prolonged course'],['course length does not usually exceed a couple of days'],['this is longer than normal']])+ ['please review need to'] + reviewDate(),
+        4: Patient('gendered') + random.choice([['has been taking'],['has been prescribed'],['has been using']]) + drug1['drugName'] + ['for'] + randTimePeriod('any') + ['please review need to'] + discontinue() + ['or'] + reviewDate(),
+        5: ['Usual course length for'] + drug1['drugName'] + ['is'] + randTimePeriod('days') + ['as per'] + randomGuidance() + random.choice([['this has now been exceeded'],['this means the course should complete tomorrow'],['one day remains of this course']]) + ['can you'] + please() + reviewDate()
+    }
+    
+
+    choice = random.randrange(0, len(sentences),1)
+    return tagsentences(sentences[choice])
+    #Duration of prescription has exceeded course length	Amoxicillin has been prescribed for 7 days please review need to discontinue
+
+def medicationOverprescribing(drug1,drug2):
+    sentences = {
+        0: random.choice([['Patient'],Patient('gendered')]) + ['has been prescribed'] + drug1['drugName']+ please() + discontinue() +  random.choice([['the patient no longer takes this medication'],[f'the patient hasnt taken this medication for {random.randint(1,6)} months'],['the patient is not taking this anymore'],['they are not taking this anymore'],['they no longer take this medication'],[f'they no longer take this']]),
+        1: drug1['drugName']  + ['has been prescribed'] + random.choice([['the patient no longer takes this medication'],[f'the patient hasnt taken this medication for {random.randint(1,6)} months'],['the patient is not taking this anymore']]) + please() + ['review need to'] + discontinue(),
+        2: please() + ['Review'] + drug1['drugName'] + ['and'] + discontinue() + ['if appropriate would the patient be better off taking'] + drug2['drugName'],
+        3: drug1['drugName'] + random.choice([['is one of the strongest drugs in its class'],['is more potent than other medications in the same class']]) + random.choice([['can this be reviewed and an alternative'],['can an alternative be']]) + started(),
+        4: ['A dose of'] + drug1['dose'] + ['is higher than necessary for this patient as they have'] + pharmokineticIssue() + ['guidance as per'] + randomGuidance() + ['recommends a dose of'] + drug1['newdose'] + ['review need to'] + reduce_dose() + ['or'] + start() + ['an alternative']
+    }
+    
+
+    choice = random.randrange(0, len(sentences),1)
+    return tagsentences(sentences[choice])
+
+def interactions(drug1, drug2):
+    #Drug interaction	Rifampicin will reduce the plasma concentration of clarithromycin due to an interaction review need to switch antibiotics
+    sentences = {
+        0: drug1['drugName'] + random.choice([['reduces the levels of'],['will reduce the plasma concentration of'],['increases the levels of'],['reduces the levels of'],['competes with'],['increased the clearance of'],['reduces the clearance of']]) + drug2['drugName'] + ['review need to'] + discontinue() + random.choice([[drug1['drugName']],drug2['drugName']]),
+        1: drug1['drugName'] + random.choice([['reduces the levels of'],['will reduce the plasma concentration of'],['increases the levels of'],['reduces the levels of'],['competes with'],['increased the clearance of'],['reduces the clearance of']]) + drug2['drugName'] + ['review need to'] + reduce_dose() + ['of'] + random.choice([[drug1['drugName']],drug2['drugName']]),
+        2: drug1['drugName'] + random.choice([['reduces the levels of'],['will reduce the plasma concentration of'],['increases the levels of'],['reduces the levels of'],['competes with'],['increased the clearance of'],['reduces the clearance of']]) + drug2['drugName'] + ['review need to'] + start() + ['an alternative'],
+        3: random.choice([['patient is at risk of an interaction with'],['an interaction will occur between'],['An interaction between']]) + drug1['drugName'] + ['and'] + drug2['drugName'] + random.choice([['will increase the risk of side effects'],['may cause an adverse event'],['increase the risk of an adverse event'],[f'increase the risk of {sideEffects()}']]) + ['review need to'] + start() + ['alternative or'] + discontinue() + drug1['drugName'] + ['or'] + drug2['drugName'],
+        4: ['dose of'] + drug1['drugName'] + ['should be'] + random.choice([['reduced'],['increased']]) + ['by'] + random.choice([['25%'],['50%'],['30%']]) + ['when'] + random.choice([['co-administered with'],['given with'],['prescribed alongside'],['prescribed at the same time as'],['given at the same time as']]) + drug2['drugName'] + ['can dose be'] + represcribePastTense()
+    }
+
+    choice = random.randrange(0, len(sentences),1)
+    return tagsentences(sentences[choice])
+
+def transitionErrors(drug1,drug2):
+    sentences = {
+        0: ['Patient has had a recent admission on']  + randomWard() + ['where'] + drug1['drugName'] + ['was increased from'] + drug1['dose'] + ['to'] + drug2['newdose'] + random.choice([['this was not communicated to GP'],['GP record has not been updated'],['this was not included in the discharge letter'],['this was not communicated on discharge'],['the GPs system has not yet been updated']])+ ['can the dose be'] + represcribePastTense(),
+        1: ['last admission'] + drug1['drugName'] + ['was changed to'] +  drug2['drugName'] + random.choice([['current medications can been prescribed from an old list'],['GP system has not been updated yet'],[f'{drug1["drugName"]} has been prescribed however'],['an old GP record has been used for clerking medications in']]) + ['review need to'] + start() + drug2['drugName'] + ['and'] + discontinue() + drug1['drugName'],
+        2: Patient('gendered') + random.choice([['recently had a medications review'],['was recently seen by their GP'],['recently had a clinic appointment'],['attended an outpatient clinic last week']]) + random.choice([['where they were told to stop'],['and they were told to stop taking']]) + drug1['drugName'] + ['please review need to'] + discontinue() + ['the change has not yet been updated on the patients medical record']
+    }
+    choice = random.randrange(0, len(sentences),1)
+    return tagsentences(sentences[choice])
+
+
+
+#Poor compliance	Patient struggles with taking alfusozin three times daily please review need to switch to a once daily preparation
+def poorCompliance(drug1, drug2):
+    sentences = {
+        0: ''
+    }
+    choice = random.randrange(0, len(sentences),1)
+    choie = 0
+    return tagsentences(sentences[choice])
+
+
+# to delete, DUMMY []
+
+def test(): 
+
+    drug1 = randomAny('increase')
+    drug2 = randomAny('increase')
+
     oral1 = randomOral('reduce')
     oral2 = randomOral('reduce')
     #print(IncorrectMedications(oral1, oral2))
@@ -266,9 +363,34 @@ def create():
     injection2 = randomInject('reduce')
     #print(IncorrectMedications(injection1,injection2))
 
+    
+    print(doseAdjustments(drug1,drug2))
+test()
+def create():
     drug1 = randomAny('increase')
     drug2 = randomAny('increase')
-    print(inadequateMonitoring(drug1,drug2))
 
-create()
+    interventionTypes = [reduceDoses,duplicatedTherapy,contraindications,incorrectDoseIncrease,knownAllergy,adminTime,incorrectFrequency,incorrectRoute,unclearIndication,inadequateMonitoring,prescriptionDuration,medicationOverprescribing,interactions,transitionErrors,poorCompliance]
+    return random.choice(interventionTypes)(drug1,drug2)
+    
+def run():
+    #Thousands of demonstrators have marched throug...	O,O,O,O,O,O,B-geo,O,O,O,O,O,B-geo,O,O,O,O,O,B-.
+    data = []
+    for i in range(10):
+        text = ''
+        tags= ''
+        d = create()
+        for x in d:
+            text = text + str(x[0]) + ' '
+            tags = tags + str(x[1]) + ','
+        sent = [text,tags]
+        data.append(sent)
+    
+    df = pd.DataFrame(data)
+    print(df.head())
+
+
+    
+
+
 
