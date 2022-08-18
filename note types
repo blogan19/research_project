@@ -55,22 +55,17 @@ Inadequate monitoring
 
 Duration of prescription has exceeded course length	Amoxicillin has been prescribed for 7 days please review need to discontinue
 
-
-
+Drug interaction	Rifampicin will reduce the plasma concentration of clarithromycin due to an interaction review need to switch antibiotics
     
-
+Transition Errors	Patients dose of bisoprolol was increased from 2.5mg to 5mg last admission however the GP record has not been updated. Please review need to increase dose
 
 Dose adjustment required	Patients renal function has improved please review need to increase dose of enoxaparin to 70mg OD
-Drug interaction	Rifampicin will reduce the plasma concentration of clarithromycin due to an interaction review need to switch antibiotics
-
-Transition Errors	Patients dose of bisoprolol was increased from 2.5mg to 5mg last admission however the GP record has not been updated. Please review need to increase dose
 Poor compliance	Patient struggles with taking alfusozin three times daily please review need to switch to a once daily preparation
 
 
 my intervention types
  - start this medication
  - switch to this medication as more cost effective or nice guidance recomends etc,
- - course lengths
 
 
 
