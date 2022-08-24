@@ -104,7 +104,7 @@ def increase_dose():
             0: [('re-prescribe','B-Action'),('at','I-Action'),('a','I-Action'),('higher','I-Action'),('dose','L-Action')],
             1: [('amend','B-Action'),('dose','L-Action')],
             2: [('increase','B-Action'),('dose','L-Action')],
-            3: [('re-prescribe','B-Action')],
+            3: [('re-prescribe','B-Action'),('dose','L-Action')],
             4: [('represcribe','B-Action')],
             5: [('change','B-Action'),('dose','L-Action')],
             6: [('review','B-Action'),('need','I-Action'),('to','I-Action'),('amend','I-Action'),('the','I-Action'),('dose','L-Action')],
