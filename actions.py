@@ -108,7 +108,9 @@ def increase_dose():
             4: [('represcribe','B-Action')],
             5: [('change','B-Action'),('dose','L-Action')],
             6: [('review','B-Action'),('need','I-Action'),('to','I-Action'),('amend','I-Action'),('the','I-Action'),('dose','L-Action')],
-            7: [('increase','B-Action'),('the','I-Action'),('dose','L-Action')]
+            7: [('increase','B-Action'),('the','I-Action'),('dose','L-Action')],
+            8: [('raise','B-Action'),('dose','L-Action')],
+            9: [('prescribe','B-Action'),('at','I-Ation'),('higher','I-Action'),('dose','L-Action')]
         }
     choice = random.randrange(0,len(increase_actions),1)
     return increase_actions[choice]
