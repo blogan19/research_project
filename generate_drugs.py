@@ -53,7 +53,12 @@ def randomDrug(df,type):
     reductions = pd.read_csv(df)
     sample = reductions.sample(1).reset_index()
     
-    drug = sample['drug'][0].split(" ") 
+    drug = str(sample['drug'][0])
+    drug = drug.split(" ") 
+    try: 
+        drug.remove('')
+    except:
+        pass
     
     #Drug
     drug_tag = []
@@ -100,7 +105,7 @@ def randomDrug(df,type):
             dose_tag.append((x,"B-Dose"))
         elif i == len(drug)-1:
             dose_tag.append((x,"L-Dose"))
-        else: 
+        elif   i == len(drug)-1 or i != 0: 
             dose_tag.append((x,"I-Dose"))
 
     new_dose = new_dose.split(" ")

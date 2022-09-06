@@ -244,7 +244,7 @@ def administrationTimes():
     return [random.choice(['in the morning','at night','at lunchtime','before food','after food','in the evening'])]
 
 def randomIndication():
-    return [random.choice(['hypertension','diabetes','high blood pressure','copd','asthma','community acquired pneumonia','CAP','hospital acquired pneumonia','HAP','urinary tract infection','UTI','endocarditis','prostatitis','epilepsy','parkinsons disease','alzheimers disease','dementia'])]
+    return [random.choice(['hypertension','diabetes','high blood pressure','copd','asthma','community acquired pneumonia','CAP','hospital acquired pneumonia','HAP','urinary tract infection','UTI','endocarditis','prostatitis','epilepsy','parkinsons disease','alzheimers disease','dementia','parkinsons'])]
 
 
 def randomBiochem():
@@ -283,6 +283,13 @@ def randomBiochem():
             'low': str(random.randint(10,80)/100),
             'high': str(random.randint(150,240)/100),
             'unit': 'mmol/L'
+        },
+        5: {
+            'test': 'folate',
+            'inrange': str(random.randint(80,150)/100),
+            'low': str(random.randint(10,80)/100),
+            'high': str(random.randint(150,240)/100),
+            'unit': 'mmol/L'
         }
     }
     choice = random.randrange(0,len(biochem),1)
@@ -305,7 +312,6 @@ def randomFrequency(firstFrequency):
                     freq_tag.append((x,"L-Freq"))
                 else: 
                     freq_tag.append((x,"I-Freq"))
-            print(freq_tag)
             return freq_tag
 
 def randomRoute(firstRoute):
@@ -325,5 +331,22 @@ def randomRoute(firstRoute):
                     route_Tag.append((x,"L-Route"))
                 else: 
                     route_Tag.append((x,"I-Route"))
-            print(route_Tag)
+
     return route_Tag
+
+def multipleFrequency():
+    freq = {
+        0: [('three','B-Freq'),('times','I-Freq'),('daily','L-Freq')],
+        1: [('three','B-Freq'),('times','I-Freq'),('a','I-Freq'),('day','L-Freq')],
+        2: [('four','B-Freq'),('times','I-Freq'),('a','I-Freq'),('day','L-Freq')],
+        3: [('four','B-Freq'),('times','I-Freq'),('daily','L-Freq')]
+    } 
+    lowerFreq = {
+        0: [('once','B-Freq'),('daily','L-Freq')],
+        1: [('twice','B-Freq'),('a','I-Freq'),('day','L-Freq')],
+        2: [('twice','B-Freq'),('daily','L-Freq')]
+    }
+    
+    choice = random.randrange(0,len(freq),1)
+    lowerChoice = random.randrange(0,len(lowerFreq),1)
+    return (lowerFreq[lowerChoice],freq[choice])
